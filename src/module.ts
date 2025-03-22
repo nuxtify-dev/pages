@@ -8,7 +8,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxtify-core',
     configKey: 'nuxtify',
     compatibility: {
-      nuxt: '>=3.14.0',
+      nuxt: '>=3.16.0',
     },
   },
   // Default configuration options of the Nuxt module
