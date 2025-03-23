@@ -1,8 +1,8 @@
 {
-  "name": "nuxtify-core",
+  "name": "nuxtify-pages",
   "version": "0.0.1",
-  "description": "Nuxtify core module powered by Nuxt and Vuetify.",
-  "repository": "nuxtifydev/nuxtify-core",
+  "description": "Nuxtify pages module powered by Nuxt and Vuetify.",
+  "repository": "nuxtifydev/nuxtify-pages",
   "license": "MIT",
   "type": "module",
   "exports": {

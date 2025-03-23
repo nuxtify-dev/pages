@@ -1,6 +1,6 @@
 <template>
   <div>
-    nuxtify-core module playground!
+    nuxtify-pages module playground!
   </div>
 </template>
 

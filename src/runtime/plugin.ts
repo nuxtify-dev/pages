@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin((_nuxtApp) => {
-  console.log('Plugin injected by nuxtify-core!')
+  console.log('Plugin injected by nuxtify-pages!')
 })

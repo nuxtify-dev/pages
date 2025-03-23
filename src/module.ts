@@ -5,7 +5,7 @@ export interface ModuleOptions {}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'nuxtify-core',
+    name: 'nuxtify-pages',
     configKey: 'nuxtify',
     compatibility: {
       nuxt: '>=3.16.0',
