@@ -31,6 +31,7 @@
   "dependencies": {
     "@mdi/js": "^7.4.47",
     "@nuxt/kit": "^3.16.1",
+    "defu": "^6.1.4",
     "vuetify-nuxt-module": "^0.18.4"
   },
   "devDependencies": {

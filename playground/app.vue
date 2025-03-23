@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const nuxtifyConfig = useAppConfig().nuxtify
+</script>
+
 <template>
   <div>
     nuxtify-pages module playground!
@@ -5,7 +9,9 @@
       Test
     </v-btn>
   </div>
-</template>
 
-<script setup lang="ts">
-</script>
+  <h2>nuxtifyConfig</h2>
+  <pre>
+    {{ nuxtifyConfig }}
+  </pre>
+</template>

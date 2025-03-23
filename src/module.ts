@@ -4,9 +4,10 @@ import {
   createResolver,
   installModule,
 } from '@nuxt/kit'
+import { defu } from 'defu'
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
+// Types
+import type { ModuleOptions } from '../src/runtime/types'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -14,16 +15,33 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'nuxtify',
     compatibility: {
       nuxt: '>=3.16.0',
+      bridge: false,
     },
   },
-  // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: {
+    brand: {
+      name: 'nuxtify-pages',
+      domain: '',
+      tagline: '',
+      logo: {
+        lightUrl: '',
+        darkUrl: '',
+        width: 200,
+        mobileWidth: 150,
+      },
+    },
+  },
   async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
 
     // Install modules
     await installModule('vuetify-nuxt-module', {
       vuetifyOptions: resolver.resolve('./runtime/vuetify.config.ts'),
+    })
+
+    // Expose module options to app config
+    _nuxt.options.appConfig.nuxtify = defu(_nuxt.options.appConfig.nuxtify, {
+      ..._options,
     })
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
