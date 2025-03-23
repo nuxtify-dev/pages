@@ -29,7 +29,9 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.16.1"
+    "@mdi/js": "^7.4.47",
+    "@nuxt/kit": "^3.16.1",
+    "vuetify-nuxt-module": "^0.18.4"
   },
   "devDependencies": {
     "@nuxt/devtools": "^2.3.1",
