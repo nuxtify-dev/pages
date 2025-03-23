@@ -1,5 +1,7 @@
 import {
   defineNuxtModule,
+  addComponentsDir,
+  addImportsDir,
   addPlugin,
   createResolver,
   installModule,
@@ -43,6 +45,12 @@ export default defineNuxtModule<ModuleOptions>({
     _nuxt.options.appConfig.nuxtify = defu(_nuxt.options.appConfig.nuxtify, {
       ..._options,
     })
+
+    // Add auto-imports
+    addComponentsDir({
+      path: resolver.resolve('runtime/components'),
+    })
+    addImportsDir(resolver.resolve('runtime/composables'))
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve('./runtime/plugin'))
