@@ -16,7 +16,5 @@ const nuxtifyConfig = useNuxtifyConfig()
   </div>
 
   <h2>nuxtifyConfig</h2>
-  <pre>
-    {{ nuxtifyConfig }}
-  </pre>
+  <pre>{{ nuxtifyConfig }}</pre>
 </template>
