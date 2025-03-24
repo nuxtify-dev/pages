@@ -53,4 +53,14 @@ export interface ModuleOptions {
    * Brand options
    */
   brand?: BrandOptions
+
+  /**
+   * Announcement banner options
+   */
+  announcement?: {
+    show?: boolean
+    message?: string
+    buttonText?: string
+    buttonUrl?: string
+  }
 }

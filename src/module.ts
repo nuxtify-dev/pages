@@ -32,6 +32,12 @@ export default defineNuxtModule<ModuleOptions>({
         mobileWidth: 150,
       },
     },
+    announcement: {
+      show: false,
+      message: '',
+      buttonText: '',
+      buttonUrl: '',
+    },
   },
   async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
