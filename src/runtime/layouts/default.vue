@@ -17,7 +17,7 @@ const { mdAndUp } = useDisplay()
     <AppNavigationDrawer class="d-print-none" />
 
     <AppAnnouncementBar
-      v-if="nuxtifyConfig.announcement.show"
+      v-if="nuxtifyConfig.announcement?.show"
       class="d-print-none"
     />
 

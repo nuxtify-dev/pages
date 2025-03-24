@@ -15,7 +15,7 @@ const nuxtifyConfig = useNuxtifyConfig()
 <template>
   <v-container class="text-center">
     <ClientOnly>
-      <h1>{{ nuxtifyConfig.brand.name }} Home</h1>
+      <h1>{{ nuxtifyConfig.brand?.name }} Home</h1>
       <template #fallback>
         <AppLoading />
       </template>
