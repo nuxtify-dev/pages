@@ -44,9 +44,9 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    // Install modules
+    // Modules
     await installModule('vuetify-nuxt-module', {
-      vuetifyOptions: resolver.resolve('./runtime/vuetify.config.ts'),
+      vuetifyOptions: resolver.resolve('runtime/vuetify.config.ts'),
     })
 
     // Expose module options to app config
@@ -54,23 +54,23 @@ export default defineNuxtModule<ModuleOptions>({
       ..._options,
     })
 
-    // Auto-import layouts
+    // Layouts
     addLayout({
-      src: resolver.resolve('./runtime/layouts/default.vue'),
-    })
+      src: resolver.resolve('runtime/layouts/default.vue'),
+    }, 'default')
 
-    // Auto-import components
+    // Components
     addComponentsDir({
       path: resolver.resolve('runtime/components'),
     })
 
-    // Auto-import composables
+    // Composables
     addImportsDir(resolver.resolve('runtime/composables'))
 
-    // Auto-import utils
+    // Utils
     addImportsDir(resolver.resolve('runtime/utils'))
 
-    // Extend pages
+    // Pages
     extendPages((pages) => {
       // Index
       pages.push({
@@ -88,6 +88,6 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    addPlugin(resolver.resolve('runtime/plugin'))
   },
 })
