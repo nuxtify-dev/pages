@@ -2,6 +2,7 @@ import {
   defineNuxtModule,
   addComponentsDir,
   addImportsDir,
+  addLayout,
   addPlugin,
   createResolver,
   installModule,
@@ -52,11 +53,20 @@ export default defineNuxtModule<ModuleOptions>({
       ..._options,
     })
 
-    // Add auto-imports
+    // Auto-import layouts
+    addLayout({
+      src: resolver.resolve('./runtime/layouts/default.vue'),
+    })
+
+    // Auto-import components
     addComponentsDir({
       path: resolver.resolve('runtime/components'),
     })
+
+    // Auto-import composables
     addImportsDir(resolver.resolve('runtime/composables'))
+
+    // Auto-import utils
     addImportsDir(resolver.resolve('runtime/utils'))
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
