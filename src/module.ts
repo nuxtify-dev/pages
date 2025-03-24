@@ -5,6 +5,7 @@ import {
   addLayout,
   addPlugin,
   createResolver,
+  extendPages,
   installModule,
 } from '@nuxt/kit'
 import { defu } from 'defu'
@@ -68,6 +69,23 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Auto-import utils
     addImportsDir(resolver.resolve('runtime/utils'))
+
+    // Extend pages
+    extendPages((pages) => {
+      // Index
+      pages.push({
+        name: 'index',
+        path: '/',
+        file: resolver.resolve('runtime/pages/index.vue'),
+      })
+
+      // Dynamic slug
+      pages.push({
+        name: 'slug',
+        path: '/:slug',
+        file: resolver.resolve('runtime/pages/[slug].vue'),
+      })
+    })
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve('./runtime/plugin'))
