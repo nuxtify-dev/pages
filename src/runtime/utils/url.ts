@@ -17,7 +17,12 @@ export const getUtmParams = (url: string) => {
 }
 
 export const isExternalUrl = (url: string, hostname: string) => {
-  // Relative url
+  // Empty URL
+  if (!url) {
+    return false
+  }
+
+  // Relative URL
   if (url.startsWith('/')) {
     return false
   }
