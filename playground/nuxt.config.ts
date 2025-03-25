@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       primary: [
         { text: 'Home', to: '/' },
         { text: 'About', to: '/about' },
+        { text: 'Test', to: '/test' },
         { text: 'External', href: 'https://nuxtify.dev', openInNew: true },
       ],
       secondary: [

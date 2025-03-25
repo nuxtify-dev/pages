@@ -111,7 +111,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Layouts
     addLayout({
-      src: resolver.resolve('runtime/layouts/default.vue'),
+      src: resolver.resolve('runtime/layouts/DefaultLayout.vue'),
     }, 'default')
 
     // Components
@@ -128,17 +128,17 @@ export default defineNuxtModule<ModuleOptions>({
     // Pages
     extendPages((pages) => {
       // Index
-      pages.push({
+      pages.unshift({
         name: 'index',
         path: '/',
-        file: resolver.resolve('runtime/pages/index.vue'),
+        file: resolver.resolve('runtime/pages/IndexPage.vue'),
       })
 
       // Dynamic slug
-      pages.push({
+      pages.unshift({
         name: 'slug',
         path: '/:slug',
-        file: resolver.resolve('runtime/pages/[slug].vue'),
+        file: resolver.resolve('runtime/pages/DynamicSlug.vue'),
       })
     })
 
