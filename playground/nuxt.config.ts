@@ -6,5 +6,17 @@ export default defineNuxtConfig({
     brand: {
       name: 'nuxtify-pages-playground',
     },
+    navigation: {
+      primary: [
+        { text: 'Home', to: '/' },
+        { text: 'About', to: '/about' },
+        { text: 'External', href: 'https://nuxtify.dev', openInNew: true },
+      ],
+      secondary: [
+        { text: 'Sign Up', to: '/signup' },
+        { text: 'Sign In', to: '/signin' },
+        { text: 'Help', to: '/help' },
+      ],
+    },
   },
 })

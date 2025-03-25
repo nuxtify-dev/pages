@@ -40,6 +40,10 @@ export default defineNuxtModule<ModuleOptions>({
       buttonText: '',
       buttonUrl: '',
     },
+    navigation: {
+      primary: [],
+      secondary: [],
+    },
   },
   async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)

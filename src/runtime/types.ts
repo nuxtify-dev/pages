@@ -1,3 +1,13 @@
+import type { RouteLocationRaw } from 'vue-router'
+
+interface Link {
+  text: string
+  to?: RouteLocationRaw
+  href?: string
+  icon?: string
+  openInNew?: boolean
+}
+
 interface BrandOptions {
   /**
    * The name of the brand.
@@ -62,5 +72,13 @@ export interface ModuleOptions {
     message?: string
     buttonText?: string
     buttonUrl?: string
+  }
+
+  /**
+   * Navigation options
+   */
+  navigation?: {
+    primary?: Link[]
+    secondary?: Link[]
   }
 }
