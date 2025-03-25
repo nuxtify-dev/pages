@@ -8,6 +8,11 @@ interface Link {
   openInNew?: boolean
 }
 
+interface FooterLinks {
+  title: string
+  links: Link[]
+}
+
 interface BrandOptions {
   /**
    * The name of the brand.
@@ -58,11 +63,23 @@ interface BrandOptions {
   }
 }
 
+interface PagesOptions {
+  policies: {
+    privacyUrl: string
+    termsUrl: string
+  }
+}
+
 export interface ModuleOptions {
   /**
    * Brand options
    */
   brand?: BrandOptions
+
+  /**
+   * Pages options
+   */
+  pages?: PagesOptions
 
   /**
    * Announcement banner options
@@ -80,5 +97,49 @@ export interface ModuleOptions {
   navigation?: {
     primary?: Link[]
     secondary?: Link[]
+    footerPrimary?: FooterLinks[]
+    footerSecondary?: Link[]
+  }
+
+  /**
+   * Footer options
+   */
+  footer?: {
+    copyright?: string
+    credits?: {
+      creator?: {
+        name?: string
+        domain?: string
+      }
+      prependText?: string
+      appendText?: string
+      showPoweredBy?: boolean
+    }
+    cta?: {
+      show?: boolean
+      title?: string
+      subtitle?: string
+      color?: string
+    }
+  }
+
+  /**
+   * Email options
+   */
+  email?: {
+    general?: string
+    support?: string
+    provider?: {
+      defaultSubmitUrl?: string
+    }
+  }
+
+  /**
+   * Style options
+   */
+  style?: {
+    btn?: {
+      rounded?: boolean
+    }
   }
 }

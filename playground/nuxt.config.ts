@@ -17,6 +17,36 @@ export default defineNuxtConfig({
         { text: 'Sign In', to: '/signin' },
         { text: 'Help', to: '/help' },
       ],
+      footerPrimary: [
+        {
+          title: 'Product',
+          links: [
+            { text: 'Features', to: '/features' },
+            { text: 'Pricing', to: '/pricing' },
+            { text: 'Changelog', to: '/changelog' },
+          ],
+        },
+        {
+          title: 'Company',
+          links: [
+            { text: 'About', to: '/about' },
+            { text: 'Careers', to: '/careers' },
+            { text: 'Contact', to: '/contact' },
+          ],
+        },
+        {
+          title: 'Resources',
+          links: [
+            { text: 'Blog', to: '/blog' },
+            { text: 'Documentation', to: '/docs' },
+            { text: 'Help', to: '/help' },
+          ],
+        },
+      ],
+      footerSecondary: [
+        { text: 'Privacy', to: '/privacy' },
+        { text: 'Terms', to: '/terms' },
+      ],
     },
   },
 })

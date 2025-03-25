@@ -10,3 +10,4 @@ export const useToast = () =>
       message: '',
     }),
   )
+export const useErrorMessage = () => useState('errorMessage', () => '')

@@ -23,6 +23,7 @@ export default defineNuxtModule<ModuleOptions>({
     },
   },
   defaults: {
+    // Brand
     brand: {
       name: 'nuxtify-pages',
       domain: '',
@@ -34,15 +35,65 @@ export default defineNuxtModule<ModuleOptions>({
         mobileWidth: 150,
       },
     },
+
+    // Pages
+    pages: {
+      policies: {
+        privacyUrl: '/privacy',
+        termsUrl: '/terms',
+      },
+    },
+
+    // Announcement
     announcement: {
       show: false,
       message: '',
       buttonText: '',
       buttonUrl: '',
     },
+
+    // Navigation
     navigation: {
       primary: [],
       secondary: [],
+      footerPrimary: [],
+      footerSecondary: [],
+    },
+
+    // Footer
+    footer: {
+      copyright: '',
+      credits: {
+        creator: {
+          name: '',
+          domain: '',
+        },
+        prependText: '',
+        appendText: '',
+        showPoweredBy: true,
+      },
+      cta: {
+        show: false,
+        title: '',
+        subtitle: '',
+        color: 'indigo',
+      },
+    },
+
+    // Email
+    email: {
+      general: '',
+      support: '',
+      provider: {
+        defaultSubmitUrl: '',
+      },
+    },
+
+    // Style
+    style: {
+      btn: {
+        rounded: true,
+      },
     },
   },
   async setup(_options, _nuxt) {
