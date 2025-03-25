@@ -3,7 +3,6 @@ import {
   addComponentsDir,
   addImportsDir,
   addLayout,
-  addPlugin,
   createResolver,
   extendPages,
   installModule,
@@ -141,8 +140,5 @@ export default defineNuxtModule<ModuleOptions>({
         file: resolver.resolve('runtime/pages/DynamicSlug.vue'),
       })
     })
-
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('runtime/plugin'))
   },
 })
