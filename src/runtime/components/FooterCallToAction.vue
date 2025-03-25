@@ -29,7 +29,8 @@ const nuxtifyConfig = useNuxtifyConfig()
         {{ nuxtifyConfig.footer.cta.subtitle }}
       </div>
       <EmailSubscribeForm
-        :submit-url="nuxtifyConfig.email?.provider?.defaultSubmitUrl"
+        v-if="nuxtifyConfig.email?.provider?.defaultSubmitUrl"
+        :submit-url="nuxtifyConfig.email.provider.defaultSubmitUrl"
         dark
       />
     </v-col>
