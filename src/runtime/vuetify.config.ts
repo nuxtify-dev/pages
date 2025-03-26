@@ -8,6 +8,7 @@ export default defineVuetifyConfiguration({
     themes: {
       light: {
         colors: {
+          primary: '#020420',
           secondary: '#00DC82',
           background: '#fff',
         },
