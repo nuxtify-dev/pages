@@ -100,7 +100,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Modules
     await installModule('vuetify-nuxt-module', {
-      vuetifyOptions: resolver.resolve('runtime/vuetify.config.ts'),
+      vuetifyOptions: resolver.resolve('./runtime/vuetify.config.ts'),
     })
 
     // Expose module options to app config
@@ -110,19 +110,19 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Layouts
     addLayout({
-      src: resolver.resolve('runtime/layouts/DefaultLayout.vue'),
+      src: resolver.resolve('./runtime/layouts/DefaultLayout.vue'),
     }, 'default')
 
     // Components
     addComponentsDir({
-      path: resolver.resolve('runtime/components'),
+      path: resolver.resolve('./runtime/components'),
     })
 
     // Composables
-    addImportsDir(resolver.resolve('runtime/composables'))
+    addImportsDir(resolver.resolve('./runtime/composables'))
 
     // Utils
-    addImportsDir(resolver.resolve('runtime/utils'))
+    addImportsDir(resolver.resolve('./runtime/utils'))
 
     // Pages
     extendPages((pages) => {
@@ -130,14 +130,14 @@ export default defineNuxtModule<ModuleOptions>({
       pages.unshift({
         name: 'index',
         path: '/',
-        file: resolver.resolve('runtime/pages/IndexPage.vue'),
+        file: resolver.resolve('./runtime/pages/IndexPage.vue'),
       })
 
       // Dynamic slug
       pages.unshift({
         name: 'slug',
         path: '/:slug',
-        file: resolver.resolve('runtime/pages/DynamicSlug.vue'),
+        file: resolver.resolve('./runtime/pages/DynamicSlug.vue'),
       })
     })
   },
