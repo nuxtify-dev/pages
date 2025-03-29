@@ -38,6 +38,10 @@ jobs:
       - name: Install dependencies
         run: npx nypm@latest i
 
+      - name: Install nuxi globally
+        run: npx nypm@latest add -D nuxi
+
+
       - name: Playground prepare
         run: npm run dev:prepare
 
