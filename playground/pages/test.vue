@@ -5,7 +5,7 @@ const nuxtifyConfig = useNuxtifyConfig()
 <template>
   <div>
     <h1>
-      nuxtify-pages module playground!
+      @nuxtify/pages module playground!
     </h1>
 
     <v-btn>

@@ -3,8 +3,8 @@ import { useServerSeoMeta, useNuxtifyConfig } from '#imports'
 
 // Page info
 useServerSeoMeta({
-  title: 'nuxtify-pages',
-  description: 'This is the nuxtify-pages homepage.',
+  title: '@nuxtify/pages',
+  description: 'This is the @nuxtify/pages homepage.',
 })
 
 // App state

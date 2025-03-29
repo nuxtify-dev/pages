@@ -1,11 +1,18 @@
 {
-  "name": "nuxtify-pages",
-  "version": "0.0.1",
+  "name": "@nuxtify/pages",
+  "version": "0.1.0",
   "description": "Nuxtify pages module powered by Nuxt and Vuetify.",
-  "repository": "nuxtifydev/nuxtify-pages",
-  "homepage": "https://nuxtify.dev/",
   "license": "MIT",
+  "homepage": "https://nuxtify.dev/",
   "author": "Nuxtify.dev <hello@nuxtify.dev>",
+  "funding": "https://github.com/sponsors/davidstackio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxtifydev/pages"
+  },
+  "bugs": {
+    "url": "https://github.com/nuxtifydev/pages/issues"
+  },
   "type": "module",
   "exports": {
     ".": {

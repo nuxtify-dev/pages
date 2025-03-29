@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "nuxtify-pages-playground",
+  "name": "@nuxtify/pages-playground",
   "type": "module",
   "scripts": {
     "dev": "nuxi dev",
