@@ -10,7 +10,7 @@ import {
 import { defu } from 'defu'
 
 // Types
-import type { ModuleOptions } from '../src/runtime/types'
+import type { ModuleOptions } from './types'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {

@@ -1,5 +1,5 @@
 // Types
-import type { ModuleOptions } from '../types'
+import type { ModuleOptions } from '../../types'
 
 import { useAppConfig } from '#app'
 
