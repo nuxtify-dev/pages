@@ -100,7 +100,31 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Modules
     await installModule('vuetify-nuxt-module', {
-      vuetifyOptions: resolver.resolve('./runtime/vuetify.config.ts'),
+      vuetifyOptions: {
+        icons: {
+          defaultSet: 'mdi-svg',
+        },
+        theme: {
+          themes: {
+            light: {
+              colors: {
+                primary: '#020420',
+                secondary: '#00DC82',
+                background: '#fff',
+              },
+            },
+          },
+        },
+        defaults: {
+          VBtn: { color: 'secondary', variant: 'flat', class: 'text-none' },
+          VAlert: {
+            VBtn: { color: 'inherit' },
+          },
+          VFooter: {
+            VBtn: { color: 'inherit' },
+          },
+        },
+      },
     })
 
     // Expose module options to app config
