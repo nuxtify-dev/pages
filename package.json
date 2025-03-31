@@ -8,10 +8,10 @@
   "funding": "https://github.com/sponsors/davidstackio",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuxtifydev/pages"
+    "url": "git+https://github.com/nuxtify-dev/pages"
   },
   "bugs": {
-    "url": "https://github.com/nuxtifydev/pages/issues"
+    "url": "https://github.com/nuxtify-dev/pages/issues"
   },
   "type": "module",
   "exports": {

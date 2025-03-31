@@ -11,7 +11,7 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxtify Docs][nuxtify-src]][nuxtify-href] -->
-<!-- [🏀 Online playground](https://stackblitz.com/github/nuxtifydev/pages?file=playground%2Fapp.vue) -->
+<!-- [🏀 Online playground](https://stackblitz.com/github/nuxtify-dev/pages?file=playground%2Fapp.vue) -->
 
 ### Table of Contents
 
@@ -120,7 +120,7 @@ Develop and [deploy](https://nuxt.com/docs/getting-started/deployment) your Nuxt
 
 ### Module configuration
 
-To see the full config, check out the [types](https://github.com/nuxtifydev/pages/blob/main/src/types.ts).
+To see the full config, check out the [types](https://github.com/nuxtify-dev/pages/blob/main/src/types.ts).
 
 ### Overriding the defaults
 
@@ -152,8 +152,8 @@ I invite you to contribute and help improve Nuxtify!
 
 Here are a few ways you can get involved:
 
-- **Reporting Bugs:** If you come across any bugs or issues, please [open a new issue](https://github.com/nuxtifydev/pages/issues/new).
-- **Suggestions:** Have ideas to enhance Nuxtify? I'd love to hear them! You can [open a new issue](https://github.com/nuxtifydev/pages/issues/new) describing your feature request or suggestion.
+- **Reporting Bugs:** If you come across any bugs or issues, please [open a new issue](https://github.com/nuxtify-dev/pages/issues/new).
+- **Suggestions:** Have ideas to enhance Nuxtify? I'd love to hear them! You can [open a new issue](https://github.com/nuxtify-dev/pages/issues/new) describing your feature request or suggestion.
 - **Local Development:** contribute directly to the framework with a pull request. Just follow the instructions below.
 
 ## <a name="local-development">🏠 Local Development</a>
@@ -191,7 +191,7 @@ Learn about [authoring Nuxt modules](https://nuxt.com/docs/guide/going-further/m
 
 ## <a name="license">⚖️ License</a>
 
-[MIT](https://github.com/nuxtifydev/pages/blob/main/LICENSE)
+[MIT](https://github.com/nuxtify-dev/pages/blob/main/LICENSE)
 
 <!-- Badges -->
 
