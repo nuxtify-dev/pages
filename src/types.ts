@@ -1,8 +1,6 @@
-import type { RouteLocationRaw } from 'vue-router'
-
 interface Link {
   text: string
-  to?: RouteLocationRaw
+  to?: string
   href?: string
   icon?: string
   openInNew?: boolean
