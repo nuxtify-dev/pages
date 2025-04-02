@@ -4,7 +4,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-03-22',
   nuxtify: {
     brand: {
-      name: '@nuxtify/pages-playground',
+      name: '@nuxtify/pages playground',
+    },
+    announcement: {
+      show: true,
+      message: 'Welcome to the @nuxtify/pages playground!',
+      buttonText: 'Click me',
+      buttonUrl: 'https://nuxtify.dev/',
     },
     navigation: {
       primary: [
