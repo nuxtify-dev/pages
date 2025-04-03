@@ -2,6 +2,7 @@ import {
   defineNuxtModule,
   addComponentsDir,
   addImportsDir,
+  addServerImportsDir,
   addLayout,
   createResolver,
   extendPages,
@@ -144,9 +145,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Composables
     addImportsDir(resolver.resolve('./runtime/composables'))
+    addServerImportsDir(resolver.resolve('./runtime/server/composables'))
 
     // Utils
     addImportsDir(resolver.resolve('./runtime/utils'))
+    addServerImportsDir(resolver.resolve('./runtime/server/utils'))
 
     // Pages
     extendPages((pages) => {
