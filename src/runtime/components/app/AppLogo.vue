@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useAppConfig } from '#app'
-import { useDisplay, computed } from '#imports'
+import { useAppConfig, useDisplay, computed } from '#imports'
 
 // Props
 const props = defineProps({

@@ -1,4 +1,4 @@
-import { useState } from '#app'
+import { useState } from '#imports'
 
 // Types
 export interface Dialog {
