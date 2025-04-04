@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > **Early Access Preview:**
-> This module is under heavy development. While it is actively used to power a [handful of sites](https://nuxtify.dev/showcase) in production, expect things to change frequently. I will do my best to call out breaking changes in the [changelog](https://github.com/nuxtify-dev/pages/blob/main/CHANGELOG.md).
+> This module is under active development. While it is already used to power a [handful of sites](https://nuxtify.dev/showcase) in production, expect things to change frequently. I will do my best to call out breaking changes in the [changelog](https://github.com/nuxtify-dev/pages/blob/main/CHANGELOG.md).
 
 ### Table of Contents
 
