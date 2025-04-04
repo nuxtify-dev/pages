@@ -13,6 +13,10 @@
 [![Nuxtify Docs][nuxtify-src]][nuxtify-href] -->
 <!-- [🏀 Online playground](https://stackblitz.com/github/nuxtify-dev/pages?file=playground%2Fapp.vue) -->
 
+> [!NOTE]
+> **Early Access Preview:**
+> This module is under heavy development. While it is actively used to power a [handful of sites](https://nuxtify.dev/showcase) in production, expect things to change frequently. I will do my best to call out breaking changes in the [changelog](https://github.com/nuxtify-dev/pages/blob/main/CHANGELOG.md).
+
 ### Table of Contents
 
 - ♾️ [Why Nuxtify?](#why-nuxtify)
@@ -26,7 +30,7 @@
 
 ## <a name="why-nuxtify">♾️ Why Nuxtify?</a>
 
-Nuxtify is a collection of [Nuxt modules](https://nuxt.com/docs/guide/concepts/modules) that will help you stay organized, maintain focus, and _ship weirdly fast_.
+Nuxtify is a collection of [Nuxt modules](https://nuxt.com/docs/guide/concepts/modules) that help you stay organized, maintain focus, and _ship weirdly fast_.
 
 It's built on a loosely opinionated stack that eliminates decision fatigue and ensures consistency across projects. This extensible approach gives you incredible control over your site's structure and style.
 
@@ -52,7 +56,7 @@ Nuxtify builds on the amazing features of [Vue](https://vuejs.org/guide/introduc
 
 ### 💡 Intuitive UI & UX
 
-- Ready to use components, page templates, sections, and layouts so you can _ship weirdly fast_
+- Ready to use components, page templates, and layouts so you can _ship weirdly fast_
 - Easily override any component with [Vuetify global defaults](https://vuetifyjs.com/en/features/global-configuration/)
 - Icons powered by [Material Design Icons](https://pictogrammers.com/library/mdi/) via [Vuetify icon fonts](https://vuetifyjs.com/en/features/icon-fonts/)
 - Fully responsive and adapts to all modern browsers and devices
@@ -71,8 +75,8 @@ Nuxtify builds on the amazing features of [Vue](https://vuejs.org/guide/introduc
 ### 🤖 Smart SEO, Security, & Performance
 
 - Fully tree shakeable for small bundle sizes
-- Robots, sitemaps, schema.org, social share images, broken links, and more powered by [Nuxt SEO](https://nuxtseo.com/)
 - Optimized caching and rendering strategies for each page with [hybrid rendering](https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering)
+- (coming soon) Robots, sitemaps, schema.org, social share images, broken links, and more powered by [Nuxt SEO](https://nuxtseo.com/)
 - (coming soon) Fast, responsive, optimized images for [20+ image providers](https://image.nuxt.com/get-started/providers) powered by [Nuxt Image](https://image.nuxt.com/)
 - (coming soon) Load third-party scripts with better performance, privacy, security powered by [Nuxt Scripts](https://scripts.nuxt.com/)
 - (coming soon) Optimal security patterns and principles powered by [Nuxt Security](https://nuxt.com/modules/security)
@@ -126,15 +130,15 @@ To see the full config, check out the [types](https://github.com/nuxtify-dev/pag
 
 Nuxtify comes pre-configured with sensible defaults. Both for how the module functions and for the corresponding Nuxt [directory](https://nuxt.com/docs/guide/directory-structure).
 
-If you need to override a [component](https://nuxt.com/docs/guide/directory-structure/components), [page](https://nuxt.com/docs/guide/directory-structure/pages), or [layout](https://nuxt.com/docs/guide/directory-structure/layouts), create the a file of the same name in your project (in the appropriate directory).
+If you need to override a [component](https://nuxt.com/docs/guide/directory-structure/components), [page](https://nuxt.com/docs/guide/directory-structure/pages), or [layout](https://nuxt.com/docs/guide/directory-structure/layouts), create the a file with the same name in your project (in the appropriate directory).
 
-If you need to override a [composable](https://nuxt.com/docs/guide/directory-structure/composables) or [utils](https://nuxt.com/docs/guide/directory-structure/utils) utility function, create a function of the same name in your project (in the appropriate directory).
+If you need to override a [composable](https://nuxt.com/docs/guide/directory-structure/composables) or [utils](https://nuxt.com/docs/guide/directory-structure/utils) utility function, create a function with the same name in your project (in the appropriate directory).
 
 ## <a name="updates">✅ Updates</a>
 
 [✨ Release Notes](/CHANGELOG.md)
 
-It's easy to stay up to date with the latest version of Nuxtify. Just update to the latest package from your favorite package manager.
+It's easy to stay up to date with the latest version of Nuxtify. Just update to the latest package using your favorite package manager.
 
 **Minor and patch versions**
 ```bash
@@ -158,10 +162,9 @@ Here are a few ways you can get involved:
 
 ## <a name="local-development">🏠 Local Development</a>
 
-<details>
-  <summary>CLI commands</summary>
-  
-  ```bash
+### CLI commands
+
+```bash
   # Install dependencies
   npm install
   
@@ -180,12 +183,7 @@ Here are a few ways you can get involved:
   # Run Vitest
   npm run test
   npm run test:watch
-  
-  # Release new version
-  npm run release
   ```
-
-</details>
 
 Learn about [authoring Nuxt modules](https://nuxt.com/docs/guide/going-further/modules).
 
