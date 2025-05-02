@@ -16,7 +16,7 @@ import type { ModuleOptions } from './types'
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxtify-pages',
-    configKey: 'nuxtify',
+    configKey: 'nuxtifyPages',
     compatibility: {
       nuxt: '>=3.16.0',
       bridge: false,
