@@ -108,7 +108,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtify/pages'
   ],
-  nuxtify: {
+  nuxtifyPages: {
     /* module specific options */
   }
 });
