@@ -1,6 +1,6 @@
 {
   "name": "@nuxtify/pages",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Nuxtify pages module powered by Nuxt and Vuetify.",
   "license": "MIT",
   "homepage": "https://nuxtify.dev/",

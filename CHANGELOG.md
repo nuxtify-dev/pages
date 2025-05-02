@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.0] - 2025-05-02
+
+### Migration
+
+Change `nuxtify` module key to `nuxtifyPages`.
+
+### Changes
+- dx!: change module config key
+- build!: remove .cjs and update to latest module builder
+- ui: add 1200 character form rule
+- chore(deps): update nuxt
+- chore(deps): update minors
+
 ## [0.1.0] - 2025-04-04
 
 - chore: install and configure Nuxt and Vuetify
