@@ -1,9 +1,6 @@
 <div align=center>
-  <img src="https://nuxtify.dev/img/nuxtify-wordmark-dark.png"/>
+  <img src="./nuxtify-banner.png"/>
 </div>
-<p align=center>
-  Build progressively enhanced web apps and sites with Nuxt and Vuetify.
-</p>
 
 # Nuxtify Pages
 
