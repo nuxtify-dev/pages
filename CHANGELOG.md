@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.1] - 2025-05-08
+
+- chore(deps): update nuxt minor
+- chore(deps): update minors
+
 ## [0.2.0] - 2025-05-02
 
 ### Migration
@@ -7,6 +12,7 @@
 Change `nuxtify` module key to `nuxtifyPages`.
 
 ### Changes
+
 - dx!: change module config key
 - build!: remove .cjs and update to latest module builder
 - ui: add 1200 character form rule
