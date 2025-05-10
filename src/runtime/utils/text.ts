@@ -148,22 +148,18 @@ export const truncate = (text: string, maxLength = 80, ellipses = true) => {
 }
 
 export const slugify = (text: string) => {
-  const slug = text
+  return text
     .normalize('NFKD') // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
     .toLowerCase() // Convert the string to lowercase letters
-    .trim() // Remove whitespace from both sides of a string (optional)
-    .replace(/[^a-z0-9\s_]/g, '') // Remove characters that are NOT alphanumeric (a-z, 0-9), whitespace, or underscores
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/_/g, '-') // Replace _ with -
-    .replace(/-{2,}/g, '-') // Replace multiple - with single -
-    .replace(/-$/g, '') // Remove trailing -
-
-  return slug
+    .trim() // Remove whitespace from both sides of a string
+    .replace(/[^a-z0-9\s_-]/g, '') // Remove characters that are NOT alphanumeric (a-z, 0-9), whitespace, hyphens, or underscores
+    .replace(/[\s_]+/g, '-') // Replace sequences of one or more whitespace characters and/or underscores with a single hyphen
+    .replace(/-{2,}/g, '-') // Replace multiple consecutive hyphens with a single hyphen
+    .replace(/^-+|-+$/g, '') // Remove any leading or trailing hyphens
 }
 
 export const unslugify = (text: string) => {
-  const unslug = text.replace(/-/g, ' ') // Replace - with spaces
-  return unslug
+  return text.replace(/-/g, ' ') // Replace hyphens with spaces
 }
 
 // Not inspired by this, but useful reference for corner cases:
