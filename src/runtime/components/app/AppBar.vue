@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDisplay, useDrawer, useNuxtifyConfig, mdiArrowTopRight, mdiClose, mdiMenu } from '#imports'
+import { mdiArrowTopRight, mdiClose, mdiMenu, useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
 
 // App state
 const { smAndDown } = useDisplay()

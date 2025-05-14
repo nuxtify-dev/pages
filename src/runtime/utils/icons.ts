@@ -1,1 +1,1 @@
-export { mdiArrowRight, mdiClose, mdiMenu, mdiArrowTopRight } from '@mdi/js'
+export { mdiArrowRight, mdiArrowTopRight, mdiClose, mdiMenu } from '@mdi/js'

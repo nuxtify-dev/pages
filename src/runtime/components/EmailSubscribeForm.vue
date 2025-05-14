@@ -2,7 +2,17 @@
 // Types
 import type { VForm } from 'vuetify/lib/components/VForm/index.mjs'
 
-import { useId, navigateTo, useDisplay, ref, useNuxtifyConfig, getUtmParams, getBaseUrl, submitFormData, formRules, isExternalUrl,
+import {
+  formRules,
+  getBaseUrl,
+  getUtmParams,
+  isExternalUrl,
+  navigateTo,
+  ref,
+  submitFormData,
+  useDisplay,
+  useId,
+  useNuxtifyConfig,
 } from '#imports'
 
 // Props

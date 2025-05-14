@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useServerSeoMeta, useNuxtifyConfig } from '#imports'
+import { useNuxtifyConfig, useServerSeoMeta } from '#imports'
 
 // Page info
 useServerSeoMeta({

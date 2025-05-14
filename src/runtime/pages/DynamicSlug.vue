@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRoute, capitalizeFirstLetter } from '#imports'
+import { capitalizeFirstLetter, useRoute } from '#imports'
 
 // Page info
 const route = useRoute()

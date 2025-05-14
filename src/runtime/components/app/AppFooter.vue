@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNuxtifyConfig, mdiArrowTopRight } from '#imports'
+import { mdiArrowTopRight, useNuxtifyConfig } from '#imports'
 
 // App state
 const nuxtifyConfig = useNuxtifyConfig()

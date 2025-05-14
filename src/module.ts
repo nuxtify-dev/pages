@@ -1,10 +1,10 @@
 import {
-  defineNuxtModule,
   addComponentsDir,
   addImportsDir,
-  addServerImportsDir,
   addLayout,
+  addServerImportsDir,
   createResolver,
+  defineNuxtModule,
   extendPages,
   installModule,
 } from '@nuxt/kit'
