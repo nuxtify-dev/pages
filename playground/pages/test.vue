@@ -12,10 +12,6 @@ const nuxtifyConfig = useNuxtifyConfig()
       Test Button
     </v-btn>
 
-    <div>
-      <AppLogo />
-    </div>
-
     <h2>nuxtifyConfig</h2>
     <pre>{{ nuxtifyConfig }}</pre>
   </div>

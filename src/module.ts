@@ -23,35 +23,6 @@ export default defineNuxtModule<ModuleOptions>({
     },
   },
   defaults: {
-    // Brand
-    brand: {
-      name: 'nuxtify-pages',
-      domain: '',
-      tagline: '',
-      logo: {
-        lightUrl: '',
-        darkUrl: '',
-        width: 200,
-        mobileWidth: 150,
-      },
-    },
-
-    // Pages
-    pages: {
-      policies: {
-        privacyUrl: '/privacy',
-        termsUrl: '/terms',
-      },
-    },
-
-    // Announcement
-    announcement: {
-      show: false,
-      message: '',
-      buttonText: '',
-      buttonUrl: '',
-    },
-
     // Navigation
     navigation: {
       primary: [],
@@ -63,15 +34,6 @@ export default defineNuxtModule<ModuleOptions>({
     // Footer
     footer: {
       copyright: '',
-      credits: {
-        creator: {
-          name: '',
-          domain: '',
-        },
-        prependText: '',
-        appendText: '',
-        showPoweredBy: true,
-      },
       cta: {
         show: false,
         title: '',
@@ -82,8 +44,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Email
     email: {
-      general: '',
-      support: '',
       provider: {
         defaultSubmitUrl: '',
       },

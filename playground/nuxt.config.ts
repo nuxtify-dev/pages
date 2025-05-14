@@ -1,17 +1,8 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
   devtools: { enabled: true },
-  compatibilityDate: '2025-03-22',
+  compatibilityDate: '2025-05-13',
   nuxtifyPages: {
-    brand: {
-      name: '@nuxtify/pages playground',
-    },
-    announcement: {
-      show: true,
-      message: 'Welcome to the @nuxtify/pages playground!',
-      buttonText: 'Click me',
-      buttonUrl: 'https://nuxtify.dev/',
-    },
     navigation: {
       primary: [
         { text: 'Home', to: '/' },
