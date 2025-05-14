@@ -11,12 +11,14 @@
 <!-- [🏀 Online playground](https://stackblitz.com/github/nuxtify-dev/pages?file=playground%2Fapp.vue) -->
 
 > [!NOTE]
+>
 > **Early Access Preview:**
 > This module is under active development. While it is already used to power a [handful of sites](https://nuxtify.dev/showcase) in production, expect things to change frequently. I will do my best to call out breaking changes in the [changelog](https://github.com/nuxtify-dev/pages/blob/main/CHANGELOG.md).
 
 ### Table of Contents
 
 - ♾️ [Why Nuxtify?](#why-nuxtify)
+- 🧩 [Nuxtify Modules](#modules)
 - ✨ [Features](#features)
 - 🚀 [Quick Start](#quick-start)
 - 🔧 [Configuration](#configuration)
@@ -47,9 +49,25 @@ This means you can:
 
 In short, Nuxtify helps you build faster, iterate smarter, and maintain consistency – without sacrificing control or creativity.
 
+## <a name="modules">🧩 Modules</a>
+
+### [Nuxtify Core](https://github.com/nuxtify-dev/core)
+
+Provides the core functionality for Nuxtify, including:
+
+- Default components, composables, and utilities
+- Global configuration and theming with [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/)
+
+### [Nuxtify Pages](https://github.com/nuxtify-dev/pages) (this module)
+
+Provides single and multi-page website building blocks so you can _ship weirdly fast_.
+
+- Ready to use page components, page templates, and email subscribe form
+- (coming soon) Robots, sitemaps, schema.org, social share images, broken links, and more powered by [Nuxt SEO](https://nuxtseo.com/)
+
 ## <a name="features">✨ Features</a>
 
-Nuxtify builds on the amazing features of [Vue](https://vuejs.org/guide/introduction), [Nuxt](https://nuxt.com/docs/getting-started/introduction), and [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/).
+Nuxtify Pages builds on the functionality in [Nuxtify Core](https://github.com/nuxtify-dev/core).
 
 ### 💡 Intuitive UI & UX
 
@@ -102,12 +120,10 @@ Add the `@nuxtify/pages` module to `nuxt.config.ts` and configure it:
 // nuxt.config.ts
 
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtify/pages'
-  ],
+  modules: ["@nuxtify/pages"],
   nuxtifyPages: {
     /* module specific options */
-  }
+  },
 });
 ```
 
@@ -138,11 +154,13 @@ If you need to override a [composable](https://nuxt.com/docs/guide/directory-str
 It's easy to stay up to date with the latest version of Nuxtify. Just update to the latest package using your favorite package manager.
 
 **Minor and patch versions**
+
 ```bash
 npm update @nuxtify/pages --save
 ```
 
 **Major versions**
+
 ```bash
 npm install @nuxtify/pages@latest --save
 ```
@@ -164,23 +182,23 @@ Here are a few ways you can get involved:
 ```bash
   # Install dependencies
   npm install
-  
+
   # Generate type stubs
   npm run dev:prepare
-  
+
   # Develop with the playground
   npm run dev
-  
+
   # Build the playground
   npm run dev:build
-  
+
   # Run ESLint
   npm run lint
-  
+
   # Run Vitest
   npm run test
   npm run test:watch
-  ```
+```
 
 Learn about [authoring Nuxt modules](https://nuxt.com/docs/guide/going-further/modules).
 
