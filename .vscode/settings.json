@@ -5,5 +5,7 @@
     "nuxtify",
     "unslug",
     "youtu"
-  ]
+  ],
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove"
 }
