@@ -2,7 +2,6 @@ import {
   addComponentsDir,
   addImportsDir,
   addLayout,
-  addServerImportsDir,
   createResolver,
   defineNuxtModule,
   extendPages,
@@ -62,31 +61,9 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     // Modules
-    await installModule('vuetify-nuxt-module', {
-      vuetifyOptions: {
-        icons: {
-          defaultSet: 'mdi-svg',
-        },
-        theme: {
-          themes: {
-            light: {
-              colors: {
-                primary: '#020420',
-                secondary: '#00DC82',
-                background: '#fff',
-              },
-            },
-          },
-        },
-        defaults: {
-          VBtn: { color: 'secondary', variant: 'flat', class: 'text-none' },
-          VAlert: {
-            VBtn: { color: 'inherit' },
-          },
-          VFooter: {
-            VBtn: { color: 'inherit' },
-          },
-        },
+    await installModule('@nuxtify/core', {
+      brand: {
+        name: '@nuxtify/pages',
       },
     })
 
@@ -107,11 +84,9 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Composables
     addImportsDir(resolver.resolve('./runtime/composables'))
-    addServerImportsDir(resolver.resolve('./runtime/server/composables'))
 
     // Utils
     addImportsDir(resolver.resolve('./runtime/utils'))
-    addServerImportsDir(resolver.resolve('./runtime/server/utils'))
 
     // Pages
     extendPages((pages) => {
