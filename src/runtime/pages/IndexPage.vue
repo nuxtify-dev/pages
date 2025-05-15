@@ -1,23 +1,27 @@
 <script setup lang="ts">
 import { useNuxtifyConfig, useServerSeoMeta } from '#imports'
 
-// Page info
-useServerSeoMeta({
-  title: '@nuxtify/pages',
-  description: 'This is the @nuxtify/pages homepage.',
-})
-
 // App state
 const nuxtifyConfig = useNuxtifyConfig()
+
+// Page info
+useServerSeoMeta({
+  title: `${nuxtifyConfig.brand?.name}`,
+  description: `This is the ${nuxtifyConfig.brand?.name} home page.`,
+})
 </script>
 
 <template>
   <v-container class="text-center">
-    <ClientOnly>
-      <h1>{{ nuxtifyConfig.brand?.name }} Home</h1>
-      <template #fallback>
-        <AppLoading />
-      </template>
-    </ClientOnly>
+    <v-row>
+      <v-col cols="12">
+        <ClientOnly>
+          <h1>{{ nuxtifyConfig.brand?.name }} Home</h1>
+          <template #fallback>
+            <AppLoading />
+          </template>
+        </ClientOnly>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
