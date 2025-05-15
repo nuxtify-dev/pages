@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.3.1] - 2025-05-15
+
+- fix(deps): explicitly add defu
+
 ## [0.3.0] - 2025-05-15
 
 ### 🚨 Breaking Changes
