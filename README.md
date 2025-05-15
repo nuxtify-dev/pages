@@ -4,11 +4,13 @@
 
 # Nuxtify Pages
 
-<!-- [![npm version][npm-version-src]][npm-version-href]
+<!--
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
 [![Nuxtify Docs][nuxtify-src]][nuxtify-href] -->
-<!-- [🏀 Online playground](https://stackblitz.com/github/nuxtify-dev/pages?file=playground%2Fapp.vue) -->
+
+[![npm version][npm-version-src]][npm-version-href]
+[![License][license-src]][license-href]
+[![🏀 Playground][playground-src]][playground-href]
 
 > [!NOTE]
 >
@@ -216,3 +218,5 @@ Learn about [authoring Nuxt modules](https://nuxt.com/docs/guide/going-further/m
 [license-href]: https://npmjs.com/package/@nuxtify/pages
 [nuxtify-src]: https://img.shields.io/badge/Nuxtify_Docs-00DC82
 [nuxtify-href]: https://nuxtify.dev/docs
+[playground-src]: https://img.shields.io/badge/%F0%9F%8F%80_Playground-Demo-00DC82?labelColor=020420
+[playground-href]: https://stackblitz.com/github/nuxtify-dev/pages?file=playground%2Fpages%2Findex.vue
