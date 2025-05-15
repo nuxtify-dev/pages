@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.3.0] - 2025-05-15
+
+### 🚨 Breaking Changes
+
+- Change `nuxtifyConfig.footer.credits` to `nuxtifyConfig.credits`
+- Change `nuxtifyConfig.pages.policies` to `nuxtifyConfig.policies`
+
+### Changes
+
+- refactor!: use @nuxtify/core module
+
+### Fixes
+
+- fix: add dialog to default layout
+- fix: use brand name variable for index page
+- fix: slug and unslugify utils
+- fix: add license
+
+### DX
+
+- dx: playground improvements
+- docs: update readme
+- chore(deps): update packages
+
 ## [0.2.1] - 2025-05-08
 
 - chore(deps): update nuxt minor
@@ -7,9 +31,9 @@
 
 ## [0.2.0] - 2025-05-02
 
-### Migration
+### 🚨 Breaking Changes
 
-Change `nuxtify` module key to `nuxtifyPages`.
+- Change `nuxtify` module key to `nuxtifyPages`
 
 ### Changes
 
