@@ -3,16 +3,21 @@ const nuxtifyConfig = useNuxtifyConfig()
 </script>
 
 <template>
-  <div>
-    <h1>
-      @nuxtify/pages module playground!
-    </h1>
+  <v-container>
+    <v-row>
+      <v-col cols="12">
+        <h1>
+          This is a test page that overrides the default dynamic page layout.
+        </h1>
 
-    <v-btn>
-      Test Button
-    </v-btn>
+        <div class="mt-4">
+          This is the site tagline: <em>{{ nuxtifyConfig.brand.tagline }}</em>
+        </div>
 
-    <h2>nuxtifyConfig</h2>
-    <pre>{{ nuxtifyConfig }}</pre>
-  </div>
+        <v-btn class="mt-4">
+          Test Button
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>

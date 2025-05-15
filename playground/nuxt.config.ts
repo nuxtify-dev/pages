@@ -2,6 +2,11 @@ export default defineNuxtConfig({
   modules: ['../src/module'],
   devtools: { enabled: true },
   compatibilityDate: '2025-05-13',
+  nuxtifyCore: {
+    brand: {
+      tagline: 'This is a sample tagline for the pages module.',
+    },
+  },
   nuxtifyPages: {
     navigation: {
       primary: [
