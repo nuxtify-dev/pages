@@ -24,7 +24,9 @@ const { mdAndUp } = useDisplay()
       <slot />
     </v-main>
 
-    <AppToast />
+    <AppToast class="d-print-none" />
+
+    <AppDialog class="d-print-none" />
 
     <v-footer class="bg-primary justify-center mt-8">
       <AppFooter />
