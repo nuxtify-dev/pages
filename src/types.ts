@@ -1,3 +1,5 @@
+import type { ModuleOptions as CoreModuleOptions } from '@nuxtify/core'
+
 interface Link {
   text: string
   to?: string
@@ -11,7 +13,7 @@ interface FooterLinks {
   links: Link[]
 }
 
-export interface ModuleOptions {
+interface PageModuleOptions {
   /**
    * Navigation options
    */
@@ -53,3 +55,5 @@ export interface ModuleOptions {
     }
   }
 }
+
+export type ModuleOptions = Omit<CoreModuleOptions, keyof PageModuleOptions> & PageModuleOptions
