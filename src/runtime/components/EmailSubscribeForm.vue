@@ -201,7 +201,7 @@ async function handleSubmit() {
       <span v-if="showPrivacy">
         By signing up you agree to the
         <NuxtLink
-          :to="nuxtifyConfig.pages?.policies?.privacyUrl"
+          :to="nuxtifyConfig.policies?.privacyUrl"
           :class="`text-decoration-none ${
             dark ? 'text-grey-lighten-2' : 'text-medium-emphasis'
           }`"

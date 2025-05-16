@@ -87,22 +87,22 @@ const footerSecondaryLinks = nuxtifyConfig.navigation?.footerSecondary
             }}.
 
             <!-- Credits -->
-            {{ nuxtifyConfig.footer?.credits?.prependText }}
-            <span v-if="nuxtifyConfig.footer?.credits?.creator?.name">
+            {{ nuxtifyConfig.credits?.prependText }}
+            <span v-if="nuxtifyConfig.credits?.creator?.name">
               <a
-                v-if="nuxtifyConfig.footer.credits.creator.domain"
-                :href="`https://${nuxtifyConfig.footer.credits.creator.domain}/?utm_source=${nuxtifyConfig.brand?.domain}&utm_medium=referral&utm_campaign=createdby`"
+                v-if="nuxtifyConfig.credits.creator.domain"
+                :href="`https://${nuxtifyConfig.credits.creator.domain}/?utm_source=${nuxtifyConfig.brand?.domain}&utm_medium=referral&utm_campaign=createdby`"
                 target="_blank"
                 rel="noopener nofollow"
                 class="font-weight-bold"
-              >{{ nuxtifyConfig.footer?.credits?.creator?.name }}</a><span v-else>{{ nuxtifyConfig.footer?.credits?.creator?.name }}</span>.
+              >{{ nuxtifyConfig.credits?.creator?.name }}</a><span v-else>{{ nuxtifyConfig.credits?.creator?.name }}</span>.
             </span>
 
             <!-- Message -->
-            {{ nuxtifyConfig.footer?.credits?.appendText }}
+            {{ nuxtifyConfig.credits?.appendText }}
 
             <!-- Powered By -->
-            <span v-if="nuxtifyConfig.footer?.credits?.showPoweredBy">
+            <span v-if="nuxtifyConfig.credits?.showPoweredBy">
               <a
                 :href="`https://nuxtify.dev/?utm_source=${nuxtifyConfig.brand?.domain}&utm_medium=referral&utm_campaign=poweredby`"
                 target="_blank"
