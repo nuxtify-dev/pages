@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.3.3] - 2025-05-16
+
+- fix(types): extend core email type
+
 ## [0.3.2] - 2025-05-16
 
 It is now recommended to use a single nuxtify module config key (merge `nuxtifyCore` into `nuxtifyPages`).
