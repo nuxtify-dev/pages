@@ -1,15 +1,29 @@
 # Changelog
 
+## [0.3.2] - 2025-05-16
+
+It is now recommended to use a single nuxtify module config key (merge `nuxtifyCore` into `nuxtifyPages`).
+
+### Changes
+
+- feat: use a single nuxt config key
+- fix: use new nuxtifyConfig keys
+- fix(types): nuxtifyConfig
+- dx: suppress duplicate imports warnings
+- chore(deps): update nuxtify core
+
 ## [0.3.1] - 2025-05-15
 
 - fix(deps): explicitly add defu
 
 ## [0.3.0] - 2025-05-15
 
+_This release was not published to npm due to a build error. Please use `v0.3.1`._
+
 ### 🚨 Breaking Changes
 
-- Change `nuxtifyConfig.footer.credits` to `nuxtifyConfig.credits`
-- Change `nuxtifyConfig.pages.policies` to `nuxtifyConfig.policies`
+- Change `nuxtifyConfig.footer.credits` to `nuxtifyConfig.credits`.
+- Change `nuxtifyConfig.pages.policies` to `nuxtifyConfig.policies`.
 
 ### Changes
 
