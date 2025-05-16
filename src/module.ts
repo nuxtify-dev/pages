@@ -24,6 +24,11 @@ export default defineNuxtModule<ModuleOptions>({
     },
   },
   defaults: {
+    // Brand
+    brand: {
+      name: '@nuxtify/pages',
+    },
+
     // Navigation
     navigation: {
       primary: [],
@@ -60,17 +65,13 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    // Modules
-    await installModule('@nuxtify/core', {
-      brand: {
-        name: '@nuxtify/pages',
-      },
-    })
-
     // Expose module options to app config
     _nuxt.options.appConfig.nuxtify = defu(_nuxt.options.appConfig.nuxtify, {
       ..._options,
     })
+
+    // Modules
+    await installModule('@nuxtify/core')
 
     // Layouts
     addLayout({
