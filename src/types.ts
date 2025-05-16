@@ -1,5 +1,14 @@
 import type { ModuleOptions as CoreModuleOptions } from '@nuxtify/core'
 
+// Extend core types
+type CoreEmailOptions = NonNullable<CoreModuleOptions['email']>
+interface Email extends CoreEmailOptions {
+  provider?: {
+    defaultSubmitUrl?: string
+  }
+}
+
+// Link types
 interface Link {
   text: string
   to?: string
@@ -7,12 +16,12 @@ interface Link {
   icon?: string
   openInNew?: boolean
 }
-
 interface FooterLinks {
   title: string
   links: Link[]
 }
 
+// Page interface
 interface PageModuleOptions {
   /**
    * Navigation options
@@ -40,11 +49,7 @@ interface PageModuleOptions {
   /**
    * Email options
    */
-  email?: {
-    provider?: {
-      defaultSubmitUrl?: string
-    }
-  }
+  email?: Email
 
   /**
    * Style options

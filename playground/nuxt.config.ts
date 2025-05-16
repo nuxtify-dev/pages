@@ -11,6 +11,12 @@ export default defineNuxtConfig({
       tagline: 'This is a sample tagline for the pages module.',
     },
 
+    // Email
+    email: {
+      general: 'hello@nuxtify.dev',
+      support: 'support@nuxtify.dev',
+    },
+
     // Navigation
     navigation: {
       primary: [
