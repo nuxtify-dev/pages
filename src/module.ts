@@ -71,7 +71,9 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     // Modules
-    await installModule('@nuxtify/core')
+    await installModule('@nuxtify/core', {
+      verboseLogs: _options.verboseLogs,
+    })
 
     // Layouts
     addLayout({
@@ -104,6 +106,23 @@ export default defineNuxtModule<ModuleOptions>({
         path: '/:slug',
         file: resolver.resolve('./runtime/pages/DynamicSlug.vue'),
       })
+    })
+
+    // Remove duplicate imports (to suppress Nuxt warnings)
+    _nuxt.hook('imports:extend', (imports) => {
+      // Find and remove the 'useNuxtifyConfig' import that comes from '@nuxtify/core'
+      const coreImportIndex = imports.findIndex(
+        (imp) => {
+          // The 'name' property refers to the exported name of the composable.
+          // The 'from' property is the path to the source file.
+          return (imp.as || imp.name) === 'useNuxtifyConfig' && imp.from.includes('@nuxtify/core')
+        },
+      )
+
+      if (coreImportIndex > -1) {
+        imports.splice(coreImportIndex, 1)
+        if (_options.verboseLogs) console.log('[nuxtify-pages] Intentionally overriding useNuxtifyConfig from @nuxtify/core.')
+      }
     })
   },
 })
