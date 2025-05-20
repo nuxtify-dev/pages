@@ -16,10 +16,6 @@ interface Link {
   icon?: string
   openInNew?: boolean
 }
-interface FooterLinks {
-  title: string
-  links: Link[]
-}
 
 // Page interface
 interface PageModuleOptions {
@@ -29,7 +25,10 @@ interface PageModuleOptions {
   navigation?: {
     primary?: Link[]
     secondary?: Link[]
-    footerPrimary?: FooterLinks[]
+    footerPrimary?: {
+      title: string
+      links: Link[]
+    }[]
     footerSecondary?: Link[]
   }
 
