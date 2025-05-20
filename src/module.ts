@@ -26,7 +26,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     // Brand
     brand: {
-      name: '@nuxtify/pages',
+      name,
     },
 
     // Navigation
