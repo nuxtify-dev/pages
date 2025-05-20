@@ -11,7 +11,7 @@ const nuxtifyConfig = useNuxtifyConfig()
         </h1>
 
         <div class="mt-4">
-          This is the site tagline: <em>{{ nuxtifyConfig.brand.tagline }}</em>
+          This is the site tagline: <em>{{ nuxtifyConfig.brand?.tagline }}</em>
         </div>
 
         <v-btn class="mt-4">
