@@ -29,14 +29,6 @@ export default defineNuxtModule<ModuleOptions>({
       name,
     },
 
-    // Navigation
-    navigation: {
-      primary: [],
-      secondary: [],
-      altPrimary: [],
-      altSecondary: [],
-    },
-
     // Footer
     footer: {
       copyright: '',

@@ -8,30 +8,8 @@ interface Email extends CoreEmailOptions {
   }
 }
 
-// Link types
-interface Link {
-  text: string
-  to?: string
-  href?: string
-  icon?: string
-  openInNew?: boolean
-}
-interface TitledLinks {
-  title: string
-  links: Link[]
-}
-
 // Page interface
 interface PageModuleOptions {
-  /**
-   * Navigation options
-   */
-  navigation?: {
-    primary?: Link[]
-    secondary?: Link[]
-    altPrimary?: TitledLinks[]
-    altSecondary?: Link[]
-  }
 
   /**
    * Footer options
