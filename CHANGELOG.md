@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0] - 2025-05-21
+
+### 🚨 Breaking Changes
+
+- Change `nuxtifyConfig.navigation.footerPrimary` to `nuxtifyConfig.navigation.altPrimary`.
+- Change `nuxtifyConfig.navigation.footerSecondary` to `nuxtifyConfig.navigation.altSecondary`.
+
+### Changes
+
+- fix: undefined error
+- refactor!: rename navigation config names
+- refactor: move navigation config to core
+- refactor(playground): simplify brand name
+- chore(deps): update minors
+
 ## [0.3.3] - 2025-05-16
 
 - fix(types): extend core email type
