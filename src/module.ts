@@ -33,8 +33,8 @@ export default defineNuxtModule<ModuleOptions>({
     navigation: {
       primary: [],
       secondary: [],
-      footerPrimary: [],
-      footerSecondary: [],
+      altPrimary: [],
+      altSecondary: [],
     },
 
     // Footer

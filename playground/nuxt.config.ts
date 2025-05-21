@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         { text: 'Sign In', to: '/signin' },
         { text: 'Help', to: '/help' },
       ],
-      footerPrimary: [
+      altPrimary: [
         {
           title: 'Product',
           links: [
@@ -56,7 +56,7 @@ export default defineNuxtConfig({
           ],
         },
       ],
-      footerSecondary: [
+      altSecondary: [
         { text: 'Privacy', to: '/privacy' },
         { text: 'Terms', to: '/terms' },
       ],

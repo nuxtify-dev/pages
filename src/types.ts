@@ -16,6 +16,10 @@ interface Link {
   icon?: string
   openInNew?: boolean
 }
+interface TitledLinks {
+  title: string
+  links: Link[]
+}
 
 // Page interface
 interface PageModuleOptions {
@@ -25,11 +29,8 @@ interface PageModuleOptions {
   navigation?: {
     primary?: Link[]
     secondary?: Link[]
-    footerPrimary?: {
-      title: string
-      links: Link[]
-    }[]
-    footerSecondary?: Link[]
+    altPrimary?: TitledLinks[]
+    altSecondary?: Link[]
   }
 
   /**

@@ -5,8 +5,8 @@ import { mdiArrowTopRight, useNuxtifyConfig } from '#imports'
 const nuxtifyConfig = useNuxtifyConfig()
 
 // Navigation
-const footerPrimaryLinks = nuxtifyConfig.navigation?.footerPrimary
-const footerSecondaryLinks = nuxtifyConfig.navigation?.footerSecondary
+const footerPrimaryLinks = nuxtifyConfig.navigation?.altPrimary
+const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
 </script>
 
 <template>
