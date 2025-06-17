@@ -53,19 +53,19 @@ In short, Nuxtify helps you build faster, iterate smarter, and maintain consiste
 
 ## <a name="modules">🧩 Modules</a>
 
-### [Nuxtify Core](https://github.com/nuxtify-dev/core)
-
-Provides the core functionality for Nuxtify, including:
-
-- Default components, composables, and utilities
-- Global configuration and theming with [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/)
-
 ### [Nuxtify Pages](https://github.com/nuxtify-dev/pages) (this module)
 
 Provides single and multi-page website building blocks so you can _ship weirdly fast_.
 
 - Ready to use page components, page templates, and email subscribe form
 - (coming soon) Robots, sitemaps, schema.org, social share images, broken links, and more powered by [Nuxt SEO](https://nuxtseo.com/)
+
+### [Nuxtify Core](https://github.com/nuxtify-dev/core)
+
+Provides the core functionality for Nuxtify, including:
+
+- Default components, composables, and utilities
+- Global configuration and theming with [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/)
 
 ## <a name="features">✨ Features</a>
 
