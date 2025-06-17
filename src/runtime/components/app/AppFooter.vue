@@ -78,14 +78,6 @@ const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
           sm="9"
         >
           <small>
-            <!-- Copyright -->
-            ©
-            {{
-              nuxtifyConfig.footer?.copyright
-                || nuxtifyConfig.brand?.name
-                || nuxtifyConfig.brand?.domain
-            }}.
-
             <!-- Credits -->
             {{ nuxtifyConfig.credits?.prependText }}
             <span v-if="nuxtifyConfig.credits?.creator?.name">

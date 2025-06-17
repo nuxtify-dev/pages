@@ -31,7 +31,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Footer
     footer: {
-      copyright: '',
       cta: {
         show: false,
         title: '',

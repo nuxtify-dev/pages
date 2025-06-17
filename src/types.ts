@@ -15,7 +15,6 @@ interface PageModuleOptions {
    * Footer options
    */
   footer?: {
-    copyright?: string
     cta?: {
       show?: boolean
       title?: string
