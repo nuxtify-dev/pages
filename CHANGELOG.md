@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.1] - 2025-06-17
+
+### 🚨 Breaking Changes
+
+- ui!: remove footer copyright
+
+### Changes
+
+- feat: useNuxtifySiteTitle in default layout
+- refactor: use AppCredits component
+- chore(deps): update packages
+- chore: remove unnecessary imports
+- docs: add nuxtify app section
+
 ## [0.4.0] - 2025-05-21
 
 ### 🚨 Breaking Changes
