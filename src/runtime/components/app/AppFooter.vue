@@ -77,31 +77,7 @@ const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
           cols="12"
           sm="9"
         >
-          <small>
-            <!-- Credits -->
-            {{ nuxtifyConfig.credits?.prependText }}
-            <span v-if="nuxtifyConfig.credits?.creator?.name">
-              <a
-                v-if="nuxtifyConfig.credits.creator.domain"
-                :href="`https://${nuxtifyConfig.credits.creator.domain}/?utm_source=${nuxtifyConfig.brand?.domain}&utm_medium=referral&utm_campaign=createdby`"
-                target="_blank"
-                rel="noopener nofollow"
-                class="font-weight-bold"
-              >{{ nuxtifyConfig.credits?.creator?.name }}</a><span v-else>{{ nuxtifyConfig.credits?.creator?.name }}</span>.
-            </span>
-
-            <!-- Message -->
-            {{ nuxtifyConfig.credits?.appendText }}
-
-            <!-- Powered By -->
-            <span v-if="nuxtifyConfig.credits?.showPoweredBy">
-              <a
-                :href="`https://nuxtify.dev/?utm_source=${nuxtifyConfig.brand?.domain}&utm_medium=referral&utm_campaign=poweredby`"
-                target="_blank"
-                rel="noopener nofollow"
-              >Powered by Nuxtify</a>.
-            </span>
-          </small>
+          <AppCredits />
 
           <v-divider
             v-if="footerSecondaryLinks?.length"
