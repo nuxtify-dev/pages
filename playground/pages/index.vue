@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useNuxtifyConfig, useServerSeoMeta } from '#imports'
-
 // App state
 const nuxtifyConfig = useNuxtifyConfig()
 const dialog = useDialog()
