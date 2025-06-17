@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { useDisplay, useNuxtifyConfig } from '#imports'
+import { useDisplay, useNuxtifyConfig, useNuxtifySiteTitle } from '#imports'
 
 // App state
 const nuxtifyConfig = useNuxtifyConfig()
 const { mdAndUp } = useDisplay()
+
+// Page info
+useNuxtifySiteTitle()
 </script>
 
 <template>
