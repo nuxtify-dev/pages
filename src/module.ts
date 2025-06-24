@@ -6,6 +6,7 @@ import {
   defineNuxtModule,
   extendPages,
   installModule,
+  useLogger,
 } from '@nuxt/kit'
 import { defu } from 'defu'
 import { name, version } from '../package.json'
@@ -55,6 +56,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
+    const logger = useLogger('Nuxtify Pages')
 
     // Expose module options to app config
     _nuxt.options.appConfig.nuxtify = defu(_nuxt.options.appConfig.nuxtify, {
@@ -112,7 +114,7 @@ export default defineNuxtModule<ModuleOptions>({
 
       if (coreImportIndex > -1) {
         imports.splice(coreImportIndex, 1)
-        if (_options.verboseLogs) console.log('[nuxtify-pages] Intentionally overriding useNuxtifyConfig from @nuxtify/core.')
+        if (_options.verboseLogs) logger.warn('[nuxtify-pages] Intentionally overriding useNuxtifyConfig from @nuxtify/core.')
       }
     })
   },
