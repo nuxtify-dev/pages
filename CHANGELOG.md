@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.2] - 2025-06-24
+
+- dx: add eslint module
+- refactor: use nuxt kit logger instead of console
+- chore(deps): update nuxtify core
+
 ## [0.4.1] - 2025-06-17
 
 ### 🚨 Breaking Changes
