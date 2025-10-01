@@ -36,3 +36,12 @@ useNuxtifySiteTitle()
     </v-footer>
   </v-app>
 </template>
+
+<style>
+.hover-link {
+  text-decoration: none;
+}
+.hover-link:hover {
+  text-decoration: underline;
+}
+</style>
