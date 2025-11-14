@@ -38,10 +38,10 @@ useNuxtifySiteTitle()
 </template>
 
 <style>
-.hover-link {
+.link-hover {
   text-decoration: none;
 }
-.hover-link:hover {
+.link-hover:hover {
   text-decoration: underline;
 }
 </style>
