@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3] - 2025-11-13
+
+- feat: add hover-link class
+- ui: more than 4 footer groups
+- dx: add eslint warn import order rule
+- chore(deps): update nuxtify core
+
 ## [0.4.2] - 2025-06-24
 
 - dx: add eslint module
