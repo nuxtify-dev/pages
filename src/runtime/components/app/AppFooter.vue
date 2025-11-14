@@ -1,12 +1,23 @@
 <script setup lang="ts">
-import { mdiArrowTopRight, useNuxtifyConfig } from '#imports'
+import { computed, mdiArrowTopRight, useNuxtifyConfig } from '#imports'
 
-// App state
+// STATE - GLOBAL
 const nuxtifyConfig = useNuxtifyConfig()
 
 // Navigation
 const footerPrimaryLinks = nuxtifyConfig.navigation?.altPrimary
 const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
+
+// COMPUTED
+const brandColWidth = computed(() => {
+  if (!footerPrimaryLinks) {
+    return 12
+  }
+  else if (footerPrimaryLinks?.length >= 4) {
+    return 4
+  }
+  return 6
+})
 </script>
 
 <template>
@@ -21,7 +32,7 @@ const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
         <!-- Brand -->
         <v-col
           cols="12"
-          :lg="footerPrimaryLinks && footerPrimaryLinks?.length >= 4 ? 3 : 4"
+          :lg="brandColWidth"
         >
           <!-- Logo -->
           <AppLogo dark />
@@ -35,7 +46,7 @@ const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
         <v-spacer />
 
         <!-- Primary Links -->
-        <v-col :lg="footerPrimaryLinks && footerPrimaryLinks?.length >= 4 ? 9 : 8">
+        <v-col :lg="12 - brandColWidth">
           <v-row>
             <v-col
               v-for="group in footerPrimaryLinks"
