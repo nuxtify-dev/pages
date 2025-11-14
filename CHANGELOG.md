@@ -1,8 +1,16 @@
 # Changelog
 
-## [0.4.3] - 2025-11-13
+## [0.4.4] - 2025-11-13
 
-- feat: add hover-link class
+- refactor!: rename `hover-link` class to `link-hover`
+
+## [0.4.3] - 2025-11-13 (Unpublished)
+
+This version was not published to npm. Use `v0.4.4` instead.
+
+### Changes
+
+- feat: add `hover-link` class
 - ui: more than 4 footer groups
 - dx: add eslint warn import order rule
 - chore(deps): update nuxtify core
