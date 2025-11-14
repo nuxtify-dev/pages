@@ -21,7 +21,7 @@ const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
         <!-- Brand -->
         <v-col
           cols="12"
-          :lg="footerPrimaryLinks?.length === 4 ? 3 : 4"
+          :lg="footerPrimaryLinks && footerPrimaryLinks?.length >= 4 ? 3 : 4"
         >
           <!-- Logo -->
           <AppLogo dark />
@@ -35,40 +35,44 @@ const footerSecondaryLinks = nuxtifyConfig.navigation?.altSecondary
         <v-spacer />
 
         <!-- Primary Links -->
-        <v-col
-          v-for="group in footerPrimaryLinks"
-          :key="group.title"
-          cols="6"
-          md="3"
-          lg="2"
-        >
-          <p class="text-body-1 font-weight-bold mb-3">
-            {{ group.title }}
-          </p>
-          <div
-            v-for="link in group.links"
-            :key="link.text"
-          >
-            <v-btn
-              :to="link.to"
-              :href="link.href"
-              variant="text"
-              :active="false"
-              :ripple="false"
-              :target="link.openInNew ? '_blank' : undefined"
-              :rel="link.openInNew ? 'noopener nofollow' : undefined"
-              class="px-0"
+        <v-col :lg="footerPrimaryLinks && footerPrimaryLinks?.length >= 4 ? 9 : 8">
+          <v-row>
+            <v-col
+              v-for="group in footerPrimaryLinks"
+              :key="group.title"
+              cols="6"
+              md="3"
+              lg="3"
             >
-              {{ link.text }}
-              <v-icon
-                v-if="link.openInNew"
-                :icon="mdiArrowTopRight"
-                size="small"
-                color="grey"
-                class="ml-1"
-              />
-            </v-btn>
-          </div>
+              <p class="text-body-1 font-weight-bold mb-3">
+                {{ group.title }}
+              </p>
+              <div
+                v-for="link in group.links"
+                :key="link.text"
+              >
+                <v-btn
+                  :to="link.to"
+                  :href="link.href"
+                  variant="text"
+                  :active="false"
+                  :ripple="false"
+                  :target="link.openInNew ? '_blank' : undefined"
+                  :rel="link.openInNew ? 'noopener nofollow' : undefined"
+                  class="px-0"
+                >
+                  {{ link.text }}
+                  <v-icon
+                    v-if="link.openInNew"
+                    :icon="mdiArrowTopRight"
+                    size="small"
+                    color="grey"
+                    class="ml-1"
+                  />
+                </v-btn>
+              </div>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
 

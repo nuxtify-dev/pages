@@ -43,16 +43,34 @@ export default defineNuxtConfig({
           title: 'Company',
           links: [
             { text: 'About', to: '/about' },
+            { text: 'Team', to: '/team' },
             { text: 'Careers', to: '/careers' },
+          ],
+        },
+        {
+          title: 'Support',
+          links: [
             { text: 'Contact', to: '/contact' },
+            { text: 'Documentation', to: '/docs' },
+            { text: 'Help', to: '/help' },
           ],
         },
         {
           title: 'Resources',
           links: [
             { text: 'Blog', to: '/blog' },
-            { text: 'Documentation', to: '/docs' },
-            { text: 'Help', to: '/help' },
+            { text: 'Podcast', to: '/podcast' },
+            { text: 'Free Guide', to: '/guide' },
+          ],
+        },
+        {
+          title: 'Ecosystem',
+          links: [
+            { text: 'Partners', to: '/partners' },
+            { text: 'Affiliates', to: '/affiliates' },
+            { text: 'Themes', to: '/themes' },
+            { text: 'Plugins', to: '/plugins' },
+            { text: 'Integrations', to: '/integrations' },
           ],
         },
       ],
