@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.5] - 2025-11-13
+
+- ui: add spacing to footer brand
+
 ## [0.4.4] - 2025-11-13
 
 - refactor!: rename `hover-link` class to `link-hover`
