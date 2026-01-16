@@ -19,8 +19,7 @@ export default defineNuxtModule<ModuleOptions>().with({
     version,
     configKey: 'nuxtifyPages',
     compatibility: {
-      nuxt: '>=3.16.0',
-      bridge: false,
+      nuxt: '>=4.0.0',
     },
   },
   moduleDependencies: {
