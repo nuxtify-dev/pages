@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.6] - 2025-01-15
+
+- ux: clicking the footer logo navigates home
+- refactor: update core module logic to match docs
+- dx: add lint:fix npm command
+- chore(deps): update nuxt 3.x
+- chore(deps): update nuxtify core and typescript
+- chore(deps): update dev packages
+
 ## [0.4.5] - 2025-11-13
 
 - ui: add spacing to footer brand
