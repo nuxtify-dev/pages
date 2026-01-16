@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.5.1
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.5.0...v0.5.1)
+
+### 💅 Refactors
+
+- **playground:** Move nuxtify to app config ([74aeff1](https://github.com/nuxtify-dev/pages/commit/74aeff1))
+
+### ❤️ Contributors
+
+- David Stack ([@davidstackio](https://github.com/davidstackio))
+
 ## [0.5.0] - 2026-01-15
 
 Nuxt 4 support.
