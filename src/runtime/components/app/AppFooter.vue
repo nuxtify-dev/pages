@@ -67,7 +67,7 @@ const brandColWidth = computed(() => {
                 <v-btn
                   :to="link.to"
                   :href="link.href"
-                  variant="text"
+                  variant="plain"
                   :active="false"
                   :ripple="false"
                   :target="link.openInNew ? '_blank' : undefined"
@@ -94,7 +94,7 @@ const brandColWidth = computed(() => {
           cols="12"
           sm="9"
         >
-          <AppCredits />
+          <AppCredits class="opacity-60" />
 
           <v-divider
             v-if="footerSecondaryLinks?.length"
@@ -151,5 +151,9 @@ a:hover {
 /* Max text width */
 .clip-text {
   max-width: 600px;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 </style>
