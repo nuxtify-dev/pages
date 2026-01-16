@@ -80,6 +80,14 @@ export default defineNuxtConfig({
       ],
     },
 
+    // Announcement
+    announcement: {
+      show: true,
+      message: 'This is a site wide announcement!',
+      buttonText: 'Click me',
+      buttonUrl: 'https://nuxtify.dev/',
+    },
+
     // Credits
     credits: {
       creator: {

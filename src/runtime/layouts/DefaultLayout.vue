@@ -18,7 +18,7 @@ useNuxtifySiteTitle()
 
     <AppNavigationDrawer class="d-print-none" />
 
-    <AppAnnouncementBar
+    <AppAnnouncement
       v-if="nuxtifyConfig.announcement?.show"
       class="d-print-none"
     />
