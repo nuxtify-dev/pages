@@ -5,7 +5,6 @@ import {
   createResolver,
   defineNuxtModule,
   extendPages,
-  installModule,
   useLogger,
 } from '@nuxt/kit'
 import { defu } from 'defu'
@@ -14,7 +13,7 @@ import { name, version } from '../package.json'
 // Types
 import type { ModuleOptions } from './types'
 
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule<ModuleOptions>().with({
   meta: {
     name,
     version,
@@ -22,6 +21,11 @@ export default defineNuxtModule<ModuleOptions>({
     compatibility: {
       nuxt: '>=3.16.0',
       bridge: false,
+    },
+  },
+  moduleDependencies: {
+    '@nuxtify/core': {
+      version: '>=0.1.11',
     },
   },
   defaults: {
@@ -54,35 +58,30 @@ export default defineNuxtModule<ModuleOptions>({
       },
     },
   },
-  async setup(_options, _nuxt) {
-    const resolver = createResolver(import.meta.url)
-    const logger = useLogger('Nuxtify Pages')
+  async setup(resolvedOptions, nuxt) {
+    const { resolve } = createResolver(import.meta.url)
+    const logger = useLogger('nuxtify-pages')
 
     // Expose module options to app config
-    _nuxt.options.appConfig.nuxtify = defu(_nuxt.options.appConfig.nuxtify, {
-      ..._options,
-    })
-
-    // Modules
-    await installModule('@nuxtify/core', {
-      verboseLogs: _options.verboseLogs,
+    nuxt.options.appConfig.nuxtify = defu(nuxt.options.appConfig.nuxtify, {
+      ...resolvedOptions,
     })
 
     // Layouts
     addLayout({
-      src: resolver.resolve('./runtime/layouts/DefaultLayout.vue'),
+      src: resolve('./runtime/layouts/DefaultLayout.vue'),
     }, 'default')
 
     // Components
     addComponentsDir({
-      path: resolver.resolve('./runtime/components'),
+      path: resolve('./runtime/components'),
     })
 
     // Composables
-    addImportsDir(resolver.resolve('./runtime/composables'))
+    addImportsDir(resolve('./runtime/composables'))
 
     // Utils
-    addImportsDir(resolver.resolve('./runtime/utils'))
+    addImportsDir(resolve('./runtime/utils'))
 
     // Pages
     extendPages((pages) => {
@@ -90,19 +89,19 @@ export default defineNuxtModule<ModuleOptions>({
       pages.unshift({
         name: 'index',
         path: '/',
-        file: resolver.resolve('./runtime/pages/IndexPage.vue'),
+        file: resolve('./runtime/pages/IndexPage.vue'),
       })
 
       // Dynamic slug
       pages.unshift({
         name: 'slug',
         path: '/:slug',
-        file: resolver.resolve('./runtime/pages/DynamicSlug.vue'),
+        file: resolve('./runtime/pages/DynamicSlug.vue'),
       })
     })
 
     // Remove duplicate imports (to suppress Nuxt warnings)
-    _nuxt.hook('imports:extend', (imports) => {
+    nuxt.hook('imports:extend', (imports) => {
       // Find and remove the 'useNuxtifyConfig' import that comes from '@nuxtify/core'
       const coreImportIndex = imports.findIndex(
         (imp) => {
@@ -114,7 +113,7 @@ export default defineNuxtModule<ModuleOptions>({
 
       if (coreImportIndex > -1) {
         imports.splice(coreImportIndex, 1)
-        if (_options.verboseLogs) logger.warn('[nuxtify-pages] Intentionally overriding useNuxtifyConfig from @nuxtify/core.')
+        if (resolvedOptions.verboseLogs) logger.info('Intentionally overriding useNuxtifyConfig from @nuxtify/core.')
       }
     })
   },
