@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.5.0] - 2026-01-15
+
+Nuxt 4 support.
+
+### 🚨 Breaking Changes
+
+- chore(deps)!: upgrade to nuxt 4
+
+### Changes
+
+- fix: replace deprecated server seo meta composable
+- chore(deps): update nuxtify core
+- chore(deps): update dev package majors
+- chore(deps): update typescript
+- chore: delete .npmrc
+
 ## [0.4.6] - 2025-01-15
 
 - ux: clicking the footer logo navigates home
