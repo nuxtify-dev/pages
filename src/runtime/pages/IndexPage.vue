@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useNuxtifyConfig, useServerSeoMeta } from '#imports'
+import { useNuxtifyConfig, useSeoMeta } from '#imports'
 
 // App state
 const nuxtifyConfig = useNuxtifyConfig()
 
 // Page info
-useServerSeoMeta({
+useSeoMeta({
   title: `${nuxtifyConfig.brand?.name}`,
   description: `This is the ${nuxtifyConfig.brand?.name} home page.`,
 })
