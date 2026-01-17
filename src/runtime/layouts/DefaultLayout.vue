@@ -14,7 +14,7 @@ useNuxtifySiteTitle()
     <!-- Accessibility -->
     <NuxtRouteAnnouncer />
 
-    <AppBar class="d-print-none" />
+    <AppHeader class="d-print-none" />
 
     <AppNavigationDrawer class="d-print-none" />
 
