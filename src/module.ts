@@ -84,14 +84,6 @@ export default defineNuxtModule<ModuleOptions>().with({
 
     // Pages
     extendPages((pages) => {
-      // Index
-      pages.unshift({
-        name: 'index',
-        path: '/',
-        file: resolve('./runtime/pages/IndexPage.vue'),
-      })
-
-      // Dynamic slug
       pages.unshift({
         name: 'slug',
         path: '/:slug',
