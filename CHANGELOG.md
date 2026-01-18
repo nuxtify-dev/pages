@@ -1,5 +1,33 @@
 # Changelog
 
+## v0.6.0
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.5.1...v0.6.0)
+
+### 🩹 Fixes
+
+- Don't override slug pages ([b14a239](https://github.com/nuxtify-dev/pages/commit/b14a239))
+
+### 💅 Refactors
+
+- ⚠️  Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
+
+### 🏡 Chore
+
+- Spelling ([0fc8d4a](https://github.com/nuxtify-dev/pages/commit/0fc8d4a))
+
+### ✅ Tests
+
+- Fix basic test ([e5a1d92](https://github.com/nuxtify-dev/pages/commit/e5a1d92))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
+
+### ❤️ Contributors
+
+- David Stack ([@davidstackio](https://github.com/davidstackio))
+
 ## v0.5.1
 
 [compare changes](https://github.com/nuxtify-dev/pages/compare/v0.5.0...v0.5.1)
