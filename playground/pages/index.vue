@@ -31,73 +31,91 @@ const clickToast = () => {
   <v-container>
     <v-row>
       <v-col cols="12">
-        <v-container>
-          <v-row>
-            <v-col cols="12">
-              <h1>{{ nuxtifyConfig.brand?.name }} playground</h1>
-            </v-col>
-          </v-row>
+        <h1>{{ nuxtifyConfig.brand?.name }} playground</h1>
+      </v-col>
+    </v-row>
 
-          <!-- Nuxtify config -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="pa-4">
-                <h2>nuxtifyConfig</h2>
-                <pre>{{ nuxtifyConfig }}</pre>
-              </v-card>
-            </v-col>
-          </v-row>
+    <!-- Nuxtify config -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
+          <h2>nuxtifyConfig</h2>
+          <pre>{{ nuxtifyConfig }}</pre>
+        </v-card>
+      </v-col>
+    </v-row>
 
-          <!-- App dialog -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="pa-4">
-                <h2>AppDialog</h2>
-                <v-btn
-                  class="mt-2"
-                  @click="clickDialog"
-                >
-                  Show Dialog
-                </v-btn>
-              </v-card>
-            </v-col>
-          </v-row>
+    <!-- App dialog -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
+          <h2>AppDialog</h2>
+          <v-btn
+            class="mt-2"
+            @click="clickDialog"
+          >
+            Show Dialog
+          </v-btn>
+        </v-card>
+      </v-col>
+    </v-row>
 
-          <!-- App toast -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="pa-4">
-                <h2>AppToast</h2>
-                <v-btn
-                  class="mt-2"
-                  @click="clickToast"
-                >
-                  Show Toast
-                </v-btn>
-              </v-card>
-            </v-col>
-          </v-row>
+    <!-- App toast -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
+          <h2>AppToast</h2>
+          <v-btn
+            class="mt-2"
+            @click="clickToast"
+          >
+            Show Toast
+          </v-btn>
+        </v-card>
+      </v-col>
+    </v-row>
 
-          <!-- App loading -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="pa-4">
-                <h2>AppLoading</h2>
-                <AppLoading />
-              </v-card>
-            </v-col>
-          </v-row>
+    <!-- App loading -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
+          <h2>AppLoading</h2>
+          <AppLoading />
+        </v-card>
+      </v-col>
+    </v-row>
 
-          <!-- App logo -->
-          <v-row>
-            <v-col cols="12">
-              <v-card class="pa-4">
-                <h2>AppLogo</h2>
-                <AppLogo />
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
+    <!-- App logo -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
+          <h2>AppLogo</h2>
+          <AppLogo />
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Link hover -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
+          <h2>link-hover class</h2>
+          <NuxtLink
+            href="#"
+            class="link-hover"
+          >This link</NuxtLink> should have the link-hover applied.
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Icons -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="pa-4">
+          <h2>Icons</h2>
+
+          Home <v-icon icon="mdi-home" />
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
