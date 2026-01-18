@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiArrowTopRight, useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
+import { useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
 
 // App state
 const { smAndDown } = useDisplay()
@@ -37,7 +37,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
             {{ link.text }}
             <v-icon
               v-if="link.openInNew"
-              :icon="mdiArrowTopRight"
+              icon="mdi-arrow-top-right"
               size="x-small"
               color="grey"
               class="ml-1"
@@ -61,7 +61,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
             {{ link.text }}
             <v-icon
               v-if="link.openInNew"
-              :icon="mdiArrowTopRight"
+              icon="mdi-arrow-top-right"
               size="x-small"
               color="grey"
               class="ml-1"
@@ -90,7 +90,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
           {{ featuredSecondaryLink.text }}
           <v-icon
             v-if="featuredSecondaryLink.openInNew"
-            :icon="mdiArrowTopRight"
+            icon="mdi-arrow-top-right"
             size="small"
             class="ml-1"
           />

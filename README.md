@@ -83,7 +83,7 @@ Nuxtify Pages builds on the functionality in [Nuxtify Core](https://github.com/n
 
 - Ready to use components, page templates, and layouts so you can _ship weirdly fast_
 - Easily override any component with [Vuetify global defaults](https://vuetifyjs.com/en/features/global-configuration/)
-- Icons powered by [Material Design Icons](https://pictogrammers.com/library/mdi/) via [Vuetify icon fonts](https://vuetifyjs.com/en/features/icon-fonts/)
+- Icons powered by [Material Design Icons](https://pictogrammers.com/library/mdi/)
 - Fully responsive and adapts to all modern browsers and devices
 - (coming soon) Light and dark mode toggle
 

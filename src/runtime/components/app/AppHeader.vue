@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiArrowTopRight, mdiClose, mdiMenu, useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
+import { useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
 
 // App state
 const { smAndDown } = useDisplay()
@@ -50,7 +50,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
         {{ link.text }}
         <v-icon
           v-if="link.openInNew"
-          :icon="mdiArrowTopRight"
+          icon="mdi-arrow-top-right"
           size="x-small"
           color="grey"
           class="ml-1"
@@ -62,7 +62,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
       <!-- Mobile navigation -->
       <v-app-bar-nav-icon
         v-if="smAndDown"
-        :icon="drawer ? mdiClose : mdiMenu"
+        :icon="drawer ? 'mdi-close' : 'mdi-menu'"
         color="primary"
         aria-label="Navigation Menu"
         @click="drawer = !drawer"
@@ -90,7 +90,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
           {{ link.text }}
           <v-icon
             v-if="link.openInNew"
-            :icon="mdiArrowTopRight"
+            icon="mdi-arrow-top-right"
             size="x-small"
             color="grey"
             class="ml-1"
@@ -113,7 +113,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
           {{ featuredSecondaryLink.text }}
           <v-icon
             v-if="featuredSecondaryLink.openInNew"
-            :icon="mdiArrowTopRight"
+            icon="mdi-arrow-top-right"
             size="small"
             class="ml-1"
           />

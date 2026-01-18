@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, mdiArrowTopRight, useNuxtifyConfig } from '#imports'
+import { computed, useNuxtifyConfig } from '#imports'
 
 // STATE - GLOBAL
 const nuxtifyConfig = useNuxtifyConfig()
@@ -77,7 +77,7 @@ const brandColWidth = computed(() => {
                   {{ link.text }}
                   <v-icon
                     v-if="link.openInNew"
-                    :icon="mdiArrowTopRight"
+                    icon="mdi-arrow-top-right"
                     size="small"
                     color="grey"
                     class="ml-1"
@@ -118,7 +118,7 @@ const brandColWidth = computed(() => {
             {{ link.text }}
             <v-icon
               v-if="link.openInNew"
-              :icon="mdiArrowTopRight"
+              icon="mdi-arrow-top-right"
               size="small"
               color="grey"
               class="ml-1"

@@ -24,7 +24,7 @@ export default defineNuxtModule<ModuleOptions>().with({
   },
   moduleDependencies: {
     '@nuxtify/core': {
-      version: '>=0.1.11',
+      version: '>=0.4.0',
     },
   },
   defaults: {
