@@ -11,7 +11,6 @@ import {
   ref,
   submitFormData,
   useDisplay,
-  useId,
   useNuxtifyConfig,
 } from '#imports'
 
@@ -60,7 +59,6 @@ const props = defineProps({
 })
 
 // App state
-const id = useId()
 const nuxtifyConfig = useNuxtifyConfig()
 const { xs } = useDisplay()
 
@@ -146,78 +144,80 @@ async function handleSubmit() {
 </script>
 
 <template>
-  <!-- Form -->
-  <v-form
-    v-if="!isSubmitted"
-    ref="form"
-    validate-on="submit"
-    @submit.prevent="handleSubmit"
+  <v-card
+    flat
+    max-width="600"
+    width="100%"
   >
-    <div class="d-sm-flex justify-center">
-      <!-- Using useId prevents hydration mismatch warnings issue with Vuetify -->
-      <!-- See: https://github.com/vuetifyjs/vuetify/issues/19696 -->
-      <!-- Once the issue is resolved (and it's used internally in Vuetify), remove use of useId -->
-      <v-text-field
-        :id
-        v-model="formInput.email"
-        type="email"
-        color="secondary"
-        :placeholder="emailPlaceholder"
-        :rules="[formRules.required, formRules.validEmail]"
-        :rounded="xs ? 't-lg' : '0 ts-lg'"
-        hide-details="auto"
-        class="text-start"
-      >
-        <template #message="{ message }">
-          <span :class="dark ? 'text-red-lighten-3' : ''">{{ message }}</span>
-        </template>
-      </v-text-field>
-      <v-btn
-        type="submit"
-        variant="flat"
-        color="secondary"
-        size="x-large"
-        class="d-flex align-center py-7 mt-2 mt-sm-0"
-        :loading
-        :rounded="rounded()"
-        :append-icon="appendButtonIcon"
-        :prepend-icon="prependButtonIcon"
-        :block="xs"
-      >
-        {{ buttonText }}
-      </v-btn>
-    </div>
-
-    <!-- Supporting Text -->
-    <div
-      v-if="showPrivacy || marketingConsentText"
-      :class="`text-body-2  ${
-        dark ? 'text-grey-lighten-2' : 'text-medium-emphasis'
-      } mt-2`"
+    <!-- Form -->
+    <v-form
+      v-if="!isSubmitted"
+      ref="form"
+      validate-on="submit"
+      @submit.prevent="handleSubmit"
     >
-      <span v-if="marketingConsentText">
-        {{ marketingConsentText }}
-      </span>
-      <span v-if="showPrivacy">
-        By signing up you agree to the
-        <NuxtLink
-          :to="nuxtifyConfig.policies?.privacyUrl"
-          :class="`text-decoration-none ${
-            dark ? 'text-grey-lighten-2' : 'text-medium-emphasis'
-          }`"
+      <div class="d-flex flex-column flex-sm-row">
+        <v-text-field
+          v-model="formInput.email"
+          type="email"
+          variant="outlined"
+          color="secondary"
+          :placeholder="emailPlaceholder"
+          :rules="[formRules.required, formRules.validEmail]"
+          :rounded="xs ? 'lg' : '0 s-lg'"
+          hide-details="auto"
+          class="flex-grow-1 text-start"
         >
-          Privacy Policy</NuxtLink>.
-      </span>
-    </div>
-  </v-form>
+          <template #message="{ message }">
+            <span :class="dark ? 'text-red-lighten-3' : ''">{{ message }}</span>
+          </template>
+        </v-text-field>
+        <v-btn
+          type="submit"
+          color="secondary"
+          size="x-large"
+          class="d-flex align-center py-7 mt-2 mt-sm-0"
+          :loading
+          :rounded="rounded()"
+          :append-icon="appendButtonIcon"
+          :prepend-icon="prependButtonIcon"
+          :block="xs"
+        >
+          {{ buttonText }}
+        </v-btn>
+      </div>
 
-  <!-- Thank You -->
-  <div
-    v-else
-    class="text-body-1"
-  >
-    {{ thankYouMessage }}
-  </div>
+      <!-- Supporting Text -->
+      <div
+        v-if="showPrivacy || marketingConsentText"
+        :class="`text-body-2  ${
+          dark ? 'text-grey-lighten-2' : 'text-medium-emphasis'
+        } mt-2`"
+      >
+        <span v-if="marketingConsentText">
+          {{ marketingConsentText }}
+        </span>
+        <span v-if="showPrivacy">
+          By signing up you agree to the
+          <NuxtLink
+            :to="nuxtifyConfig.policies?.privacyUrl"
+            :class="`text-decoration-none ${
+              dark ? 'text-grey-lighten-2' : 'text-medium-emphasis'
+            }`"
+          >
+            Privacy Policy</NuxtLink>.
+        </span>
+      </div>
+    </v-form>
+
+    <!-- Thank You -->
+    <div
+      v-else
+      class="text-body-1"
+    >
+      {{ thankYouMessage }}
+    </div>
+  </v-card>
 </template>
 
 <style scoped>
@@ -232,5 +232,6 @@ async function handleSubmit() {
 /* Hover over links */
 a:hover {
   text-decoration: underline !important;
+  text-underline-offset: 4px;
 }
 </style>
