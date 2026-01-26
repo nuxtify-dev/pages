@@ -58,7 +58,7 @@ const brandColWidth = computed(() => {
                 md="3"
                 lg="3"
               >
-                <p class="text-body-1 font-weight-bold mb-3">
+                <p class="opacity-60 text-body-1 mb-3">
                   {{ group.title }}
                 </p>
                 <div
@@ -68,7 +68,7 @@ const brandColWidth = computed(() => {
                   <v-btn
                     :to="link.to"
                     :href="link.href"
-                    variant="plain"
+                    variant="text"
                     :active="false"
                     :ripple="false"
                     :target="link.openInNew ? '_blank' : undefined"
