@@ -31,7 +31,7 @@ useNuxtifySiteTitle()
 
     <AppDialog class="d-print-none" />
 
-    <v-footer class="bg-primary justify-center mt-8">
+    <v-footer class="bg-primary justify-center mt-8 mt-md-16">
       <AppFooter />
     </v-footer>
   </v-app>
