@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.6.1
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.6.0...v0.6.1)
+
+### 💅 Refactors
+
+- Make footer tag part of AppFooter ([e9560e5](https://github.com/nuxtify-dev/pages/commit/e9560e5))
+
+### UI
+
+- ui: update email subscribe form
+- ui: add top margin to footer on bigger screens
+- ui: make footer links more prominent
+
+### ❤️ Contributors
+
+- David Stack ([@davidstackio](https://github.com/davidstackio))
+
 ## v0.6.0
 
 [compare changes](https://github.com/nuxtify-dev/pages/compare/v0.5.1...v0.6.0)
@@ -10,7 +28,7 @@
 
 ### 💅 Refactors
 
-- ⚠️  Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
+- ⚠️ Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
 
 ### 🏡 Chore
 
@@ -22,7 +40,7 @@
 
 #### ⚠️ Breaking Changes
 
-- ⚠️  Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
+- ⚠️ Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
 
 ### ❤️ Contributors
 
