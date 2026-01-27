@@ -13,6 +13,8 @@
 
 ## [0.6.0] - 2026-01-17
 
+Removed `@mdi/js` in favor of text strings in [Nuxtify Core 4.0](https://github.com/nuxtify-dev/core/releases/tag/v0.4.0).
+
 ### 🚨 Breaking Changes
 
 - refactor!: rename to AppHeader
