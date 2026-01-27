@@ -1,62 +1,27 @@
 # Changelog
 
-## v0.6.1
+## [0.6.1] - 2026-01-26
 
-[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.6.0...v0.6.1)
-
-### 💅 Refactors
-
-- Make footer tag part of AppFooter ([e9560e5](https://github.com/nuxtify-dev/pages/commit/e9560e5))
-
-### UI
-
+- refactor: make footer tag part of AppFooter
 - ui: update email subscribe form
 - ui: add top margin to footer on bigger screens
 - ui: make footer links more prominent
 
-### ❤️ Contributors
+## [0.6.0] - 2026-01-17
 
-- David Stack ([@davidstackio](https://github.com/davidstackio))
+### 🚨 Breaking Changes
 
-## v0.6.0
+- refactor!: rename to AppHeader
 
-[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.5.1...v0.6.0)
+### Changes
 
-### 🩹 Fixes
+- fix: don't override slug pages
+- chore: spelling
+- test: fix basic test
 
-- Don't override slug pages ([b14a239](https://github.com/nuxtify-dev/pages/commit/b14a239))
+## [0.5.1] - 2026-01-16
 
-### 💅 Refactors
-
-- ⚠️ Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
-
-### 🏡 Chore
-
-- Spelling ([0fc8d4a](https://github.com/nuxtify-dev/pages/commit/0fc8d4a))
-
-### ✅ Tests
-
-- Fix basic test ([e5a1d92](https://github.com/nuxtify-dev/pages/commit/e5a1d92))
-
-#### ⚠️ Breaking Changes
-
-- ⚠️ Rename to AppHeader ([117ec71](https://github.com/nuxtify-dev/pages/commit/117ec71))
-
-### ❤️ Contributors
-
-- David Stack ([@davidstackio](https://github.com/davidstackio))
-
-## v0.5.1
-
-[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.5.0...v0.5.1)
-
-### 💅 Refactors
-
-- **playground:** Move nuxtify to app config ([74aeff1](https://github.com/nuxtify-dev/pages/commit/74aeff1))
-
-### ❤️ Contributors
-
-- David Stack ([@davidstackio](https://github.com/davidstackio))
+- refactor(playground): move nuxtify to app config
 
 ## [0.5.0] - 2026-01-15
 
