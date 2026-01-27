@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { useDisplay, useNuxtifyConfig, useNuxtifySiteTitle } from '#imports'
+import { useDisplay, useNuxtifySiteTitle } from '#imports'
 
 // App state
-const nuxtifyConfig = useNuxtifyConfig()
 const { mdAndUp } = useDisplay()
 
 // Page info
@@ -11,17 +10,13 @@ useNuxtifySiteTitle()
 
 <template>
   <v-app>
-    <!-- Accessibility -->
     <NuxtRouteAnnouncer />
 
     <AppHeader class="d-print-none" />
 
     <AppNavigationDrawer class="d-print-none" />
 
-    <AppAnnouncement
-      v-if="nuxtifyConfig.announcement?.show"
-      class="d-print-none"
-    />
+    <AppAnnouncement />
 
     <v-main :min-height="mdAndUp ? 800 : 550">
       <slot />
