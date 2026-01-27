@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.6.2] - 2026-01-26
+
+- chore(deps): update nuxtify core
+
 ## [0.6.1] - 2026-01-26
 
 - refactor: make footer tag part of AppFooter
@@ -16,7 +20,6 @@
 ### Changes
 
 - fix: don't override slug pages
-- chore: spelling
 - test: fix basic test
 
 ## [0.5.1] - 2026-01-16
