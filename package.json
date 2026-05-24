@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@nuxtify/core": "^0.6.0",
-    "defu": "^6.1.4"
+    "defu": "^6.1.7"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.2.4",
