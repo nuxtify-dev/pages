@@ -155,6 +155,7 @@ async function handleSubmit() {
     flat
     max-width="600"
     width="100%"
+    color="transparent"
   >
     <!-- Form -->
     <v-form
