@@ -10,6 +10,7 @@ import {
   navigateTo,
   ref,
   submitFormData,
+  useAnalytics,
   useDisplay,
   useNuxtifyConfig,
 } from '#imports'
@@ -61,6 +62,7 @@ const props = defineProps({
 // App state
 const nuxtifyConfig = useNuxtifyConfig()
 const { xs } = useDisplay()
+const analytics = useAnalytics()
 
 // Form state
 const form = ref<VForm>()
@@ -128,6 +130,11 @@ async function handleSubmit() {
     const providerResponse = await submitFormData(props.submitUrl, formData)
     isError.value = providerResponse.isError
     errorMessage.value = providerResponse.errorMessage
+
+    // Fire sign up event
+    if (!isError.value) {
+      analytics.userSignUp()
+    }
 
     // Redirect
     if (!isError.value && props.redirectUrl) {
