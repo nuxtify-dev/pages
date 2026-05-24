@@ -218,12 +218,12 @@ Learn about [authoring Nuxt modules](https://nuxt.com/docs/guide/going-further/m
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/@nuxtify/pages/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/@nuxtify/pages
+[npm-version-src]: https://img.shields.io/npm/v/@nuxtify/pages/latest.svg?style=flat&colorA=020420&colorB=00DC82&label=version
+[npm-version-href]: https://npmx.dev/package/@nuxtify/pages
 [npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtify/pages.svg?style=flat&colorA=020420&colorB=00DC82
 [npm-downloads-href]: https://npm.chart.dev/@nuxtify/pages
 [license-src]: https://img.shields.io/npm/l/@nuxtify/pages.svg?style=flat&colorA=020420&colorB=00DC82
-[license-href]: https://npmjs.com/package/@nuxtify/pages
+[license-href]: https://npmx.dev/package/@nuxtify/pages
 [nuxtify-src]: https://img.shields.io/badge/Nuxtify_Docs-00DC82
 [nuxtify-href]: https://nuxtify.dev/docs
 [playground-src]: https://img.shields.io/badge/%F0%9F%8F%80_Playground-Demo-00DC82?labelColor=020420
