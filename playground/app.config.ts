@@ -9,20 +9,31 @@ export default defineAppConfig({
     email: {
       general: 'hello@nuxtify.dev',
       support: 'support@nuxtify.dev',
+      provider: {
+        // Need any URL so it displays
+        defaultSubmitUrl: 'https://api.mailerlite.com/v2/groups/123456/subscribers',
+      },
+    },
+
+    // Footer
+    footer: {
+      cta: {
+        show: true,
+        title: 'Ready to build something awesome?',
+        subtitle: 'Subscribe to our newsletter to receive the latest updates.',
+      },
     },
 
     // Navigation
     navigation: {
       primary: [
-        { text: 'Home', to: '/' },
-        { text: 'About', to: '/about' },
-        { text: 'Test', to: '/test' },
-        { text: 'External', href: 'https://nuxtify.dev', openInNew: true },
+        { text: 'Features', to: '/features' },
+        { text: 'Config', to: '/config' },
+        { text: 'Nuxtify.dev', href: 'https://nuxtify.dev', openInNew: true },
       ],
       secondary: [
         { text: 'Sign Up', to: '/signup' },
         { text: 'Sign In', to: '/signin' },
-        { text: 'Help', to: '/help' },
       ],
       altPrimary: [
         {
