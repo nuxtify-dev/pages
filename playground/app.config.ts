@@ -77,9 +77,11 @@ export default defineAppConfig({
     // Announcement
     announcement: {
       show: true,
+      chipText: 'News',
       message: 'This is a site wide announcement!',
       buttonText: 'Click me',
       buttonUrl: 'https://nuxtify.dev/',
+      exclude: ['/privacy', '/terms'],
     },
 
     // Credits
