@@ -6,6 +6,8 @@
     "Nuxt",
     "nuxtify",
     "unslug",
+    "Vitest",
+    "Vuetify",
     "youtu"
   ],
   "js/ts.format.semicolons": "remove",
