@@ -1,5 +1,35 @@
 # Changelog
 
+## v0.7.0
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.6.2...v0.7.0)
+
+### 🚀 Enhancements
+
+- Add user sign up event to email form ([b46e44b](https://github.com/nuxtify-dev/pages/commit/b46e44b))
+- **playground:** Add polished demos ([3b22f83](https://github.com/nuxtify-dev/pages/commit/3b22f83))
+
+### 🩹 Fixes
+
+- **dx:** Deprecated vscode key ([236d5fe](https://github.com/nuxtify-dev/pages/commit/236d5fe))
+- **deps:** Lock to vuetify v3 ([003a43b](https://github.com/nuxtify-dev/pages/commit/003a43b))
+- **ui:** Transparent subscribe form ([d211d5d](https://github.com/nuxtify-dev/pages/commit/d211d5d))
+
+### 💅 Refactors
+
+- Simplify default layout ([6f2dc79](https://github.com/nuxtify-dev/pages/commit/6f2dc79))
+
+### 📖 Documentation
+
+- Use npmx.dev in readme ([7afb5ba](https://github.com/nuxtify-dev/pages/commit/7afb5ba))
+
+### 🏡 Chore
+
+- Update release command ([b9bbc9c](https://github.com/nuxtify-dev/pages/commit/b9bbc9c))
+- Update dev command ([57a7102](https://github.com/nuxtify-dev/pages/commit/57a7102))
+- **ci:** Update gh ci workflow ([26b89ca](https://github.com/nuxtify-dev/pages/commit/26b89ca))
+- Prefer nuxt to nuxi ([a5703db](https://github.com/nuxtify-dev/pages/commit/a5703db))
+
 ## [0.6.2] - 2026-01-26
 
 - chore(deps): update nuxtify core
