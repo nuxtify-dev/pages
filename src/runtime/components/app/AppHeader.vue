@@ -22,7 +22,7 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
       <!-- Logo -->
       <NuxtLink
         to="/"
-        class="ml-2"
+        class="d-flex align-center ml-2"
       >
         <AppLogo />
       </NuxtLink>
