@@ -28,11 +28,6 @@ export default defineNuxtModule<ModuleOptions>().with({
     },
   },
   defaults: {
-    // Brand
-    brand: {
-      name,
-    },
-
     // Footer
     footer: {
       cta: {

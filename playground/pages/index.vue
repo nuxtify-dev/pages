@@ -4,7 +4,7 @@ const nuxtifyConfig = useNuxtifyConfig()
 
 // PAGE INFO
 useSeoMeta({
-  title: `${nuxtifyConfig.brand?.name} playground`,
+  title: `Playground`,
   description: `This is the ${nuxtifyConfig.brand?.name} playground.`,
 })
 </script>

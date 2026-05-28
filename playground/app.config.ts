@@ -2,7 +2,8 @@ export default defineAppConfig({
   nuxtify: {
     // Brand
     brand: {
-      tagline: 'This is a sample tagline for the pages module.',
+      name: '@nuxtify/pages',
+      tagline: 'This is a sample tagline for the @nuxtify/pages module.',
       logo: {
         lightUrl: '/img/nuxtify-logo-light.png', // Recommended 5:1 aspect ratio (e.g. 400 x 80 px)
         darkUrl: '/img/nuxtify-logo-dark.png', // Recommended 5:1 aspect ratio (e.g. 400 x 80 px)
