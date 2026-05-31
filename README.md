@@ -147,7 +147,7 @@ Develop and [deploy](https://nuxt.com/docs/getting-started/deployment) your Nuxt
 
 ### Module configuration
 
-To see the full config, check out the [types](https://github.com/nuxtify-dev/pages/blob/main/src/types.ts).
+To see the full config, check out the [types](https://github.com/nuxtify-dev/pages/blob/main/src/types/module.ts).
 
 ### Overriding the defaults
 
