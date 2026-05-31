@@ -27,7 +27,8 @@ The repository is organized as a standard Nuxt module project with a local devel
 nuxtify-pages/
 ├── src/                      # Module source directory
 │   ├── module.ts             # Main entrypoint defining default options and registering runtime files
-│   ├── types.ts              # TypeScript interface definitions for options (extends @nuxtify/core options)
+│   ├── types
+│   │   └── module.ts         # TypeScript interface definitions for options (extends @nuxtify/core options)
 │   └── runtime/              # Runtime files injected into host Nuxt applications
 │       ├── components/       # Packaged UI Components (e.g. EmailSubscribeForm, AppFooter, AppHeader)
 │       ├── composables/      # Composables (e.g. useNuxtifyConfig)
@@ -117,7 +118,7 @@ To maintain a cohesive and robust codebase, all modifications must adhere to the
    - Use `addImportsDir()` for auto-importing composables and utilities.
    - Use `addLayout()` for registering layouts.
    - Use `extendPages()` to define routes (e.g., dynamic routes like `/:slug`).
-2. **Options and Defaults:** Always ensure new configuration options in `src/types.ts` are declared as optional and are assigned appropriate defaults in `src/module.ts`.
+2. **Options and Defaults:** Always ensure new configuration options in `src/types/module.ts` are declared as optional and are assigned appropriate defaults in `src/module.ts`.
 3. **AppConfig Syncing:** Expose options to the runtime via `nuxt.options.appConfig.nuxtify`. Retrieve them inside runtime code using the `useNuxtifyConfig` composable.
 
 ### B. Vue / Component Standards
