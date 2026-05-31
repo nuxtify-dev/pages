@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.7.1
+
+🚨 Breaking changes in [`@nuxtify/core`](https://github.com/nuxtify-dev/core/releases/tag/v0.7.0)
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.0...v0.7.1)
+
+### 🚀 Enhancements
+
+- **dx:** Add types export to package ([8af596a](https://github.com/nuxtify-dev/pages/commit/8af596a))
+
+### 🩹 Fixes
+
+- **ui:** Logo vertical alignment ([5cd78ec](https://github.com/nuxtify-dev/pages/commit/5cd78ec))
+- Remove nuxtify brand title from config ([4e300ef](https://github.com/nuxtify-dev/pages/commit/4e300ef))
+
+### 💅 Refactors
+
+- **playground:** Pages features ([679645d](https://github.com/nuxtify-dev/pages/commit/679645d))
+- **dx:** Move module types ([925bba8](https://github.com/nuxtify-dev/pages/commit/925bba8))
+
+### 🏡 Chore
+
+- **playground:** Remove unused page ([eb935c4](https://github.com/nuxtify-dev/pages/commit/eb935c4))
+- Simplify stackblitz start command ([a567b18](https://github.com/nuxtify-dev/pages/commit/a567b18))
+
 ## v0.7.0
 
 [compare changes](https://github.com/nuxtify-dev/pages/compare/v0.6.2...v0.7.0)
