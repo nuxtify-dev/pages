@@ -81,7 +81,7 @@ export default defineNuxtModule<ModuleOptions>().with({
     extendPages((pages) => {
       pages.unshift({
         name: 'slug',
-        path: '/:slug',
+        path: '/:slug?',
         file: resolve('./runtime/pages/DynamicSlug.vue'),
       })
     })
