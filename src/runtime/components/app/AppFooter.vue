@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, useNuxtifyConfig } from '#imports'
+import { computed, useDisplay, useNuxtifyConfig } from '#imports'
 
 // STATE - GLOBAL
 const nuxtifyConfig = useNuxtifyConfig()
+const { xs } = useDisplay()
 
 // Navigation
 const footerPrimaryLinks = nuxtifyConfig.navigation?.altPrimary
@@ -21,7 +22,10 @@ const brandColWidth = computed(() => {
 </script>
 
 <template>
-  <v-footer class="bg-primary justify-center mt-8 mt-md-16">
+  <v-footer
+    class="bg-primary justify-center mt-8 mt-md-16"
+    :class="{ 'text-center': xs }"
+  >
     <v-row
       class="px-sm-1 pt-12 pb-4 mb-1"
       style="max-width: 1280px"
@@ -54,36 +58,35 @@ const brandColWidth = computed(() => {
               <v-col
                 v-for="group in footerPrimaryLinks"
                 :key="group.title"
-                cols="6"
+                cols="12"
+                sm="6"
                 md="3"
                 lg="3"
               >
-                <p class="opacity-60 text-body-1 mb-3">
+                <p class="opacity-60 text-body-1 text-uppercase mb-4">
                   {{ group.title }}
                 </p>
                 <div
                   v-for="link in group.links"
                   :key="link.text"
+                  class="mb-3"
                 >
-                  <v-btn
+                  <NuxtLink
                     :to="link.to"
                     :href="link.href"
-                    variant="text"
-                    :active="false"
-                    :ripple="false"
                     :target="link.openInNew ? '_blank' : undefined"
                     :rel="link.openInNew ? 'noopener nofollow' : undefined"
-                    class="px-0"
+                    class="text-body-1 link-hover"
                   >
                     {{ link.text }}
-                    <v-icon
-                      v-if="link.openInNew"
-                      icon="mdi-arrow-top-right"
-                      size="small"
-                      color="grey"
-                      class="ml-1"
-                    />
-                  </v-btn>
+                  </NuxtLink>
+                  <v-icon
+                    v-if="link.openInNew"
+                    icon="mdi-arrow-top-right"
+                    size="small"
+                    color="grey"
+                    class="ml-1"
+                  />
                 </div>
               </v-col>
             </v-row>
@@ -100,31 +103,33 @@ const brandColWidth = computed(() => {
             <v-divider
               v-if="footerSecondaryLinks?.length"
               class="my-4"
+              :class="{ 'mx-auto': xs }"
               style="width: 50px"
             />
 
             <!-- Secondary Links -->
-            <v-btn
+            <span
               v-for="link in footerSecondaryLinks"
               :key="link.text"
-              :to="link.to"
-              :href="link.href"
-              variant="plain"
-              size="small"
-              :ripple="false"
-              :target="link.openInNew ? '_blank' : undefined"
-              :rel="link.openInNew ? 'noopener nofollow' : undefined"
-              class="text-capitalize pl-0 mb-2"
+              class="mb-2"
             >
-              {{ link.text }}
+              <NuxtLink
+                :to="link.to"
+                :href="link.href"
+                :target="link.openInNew ? '_blank' : undefined"
+                :rel="link.openInNew ? 'noopener nofollow' : undefined"
+                class="text-grey text-caption font-weight-bold link-hover"
+              >
+                {{ link.text }}
+              </NuxtLink>
               <v-icon
                 v-if="link.openInNew"
                 icon="mdi-arrow-top-right"
-                size="small"
+                size="x-small"
                 color="grey"
-                class="ml-1"
+                class="mr-2"
               />
-            </v-btn>
+            </span>
           </v-col>
         </v-row>
       </v-col>
@@ -136,18 +141,6 @@ const brandColWidth = computed(() => {
 /* Links */
 a {
   color: inherit;
-  text-decoration: none;
-  justify-content: start;
-}
-.v-btn:hover,
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* No hover on buttons */
-:deep(.v-btn:hover > .v-btn__overlay) {
-  opacity: 0;
 }
 
 /* Max text width */

@@ -71,7 +71,7 @@ export default defineAppConfig({
         {
           title: 'Resources',
           links: [
-            { text: 'Blog', to: '/blog' },
+            { text: 'Blog', to: '/blog', openInNew: true },
             { text: 'Podcast', to: '/podcast' },
             { text: 'Free Guide', to: '/guide' },
           ],
@@ -88,7 +88,7 @@ export default defineAppConfig({
         },
       ],
       altSecondary: [
-        { text: 'Privacy', to: '/privacy' },
+        { text: 'Privacy', to: '/privacy', openInNew: true },
         { text: 'Terms', to: '/terms' },
       ],
     },
