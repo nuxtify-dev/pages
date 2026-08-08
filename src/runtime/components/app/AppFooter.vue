@@ -111,7 +111,7 @@ const brandColWidth = computed(() => {
             <span
               v-for="link in footerSecondaryLinks"
               :key="link.text"
-              class="mb-2"
+              class="mb-2 mr-3"
             >
               <NuxtLink
                 :to="link.to"
@@ -127,7 +127,6 @@ const brandColWidth = computed(() => {
                 icon="mdi-arrow-top-right"
                 size="x-small"
                 color="grey"
-                class="mr-2"
               />
             </span>
           </v-col>

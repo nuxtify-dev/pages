@@ -90,6 +90,8 @@ export default defineAppConfig({
       altSecondary: [
         { text: 'Privacy', to: '/privacy', openInNew: true },
         { text: 'Terms', to: '/terms' },
+        { text: 'Accessibility', to: '/accessibility' },
+        { text: 'Security', to: '/security' },
       ],
     },
 
