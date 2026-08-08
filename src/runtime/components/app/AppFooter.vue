@@ -63,7 +63,7 @@ const brandColWidth = computed(() => {
                 md="3"
                 lg="3"
               >
-                <p class="opacity-60 text-body-1 text-uppercase mb-4">
+                <p class="opacity-60 text-body-1 mb-4">
                   {{ group.title }}
                 </p>
                 <div
