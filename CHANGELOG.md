@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.7.2
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.1...v0.7.2)
+
+### 🩹 Fixes
+
+- Index page 404 if no template defined ([bb6bda4](https://github.com/nuxtify-dev/pages/commit/bb6bda4))
+
+### 💅 Refactors
+
+- Footer links, 1 col mobile ([4eba5de](https://github.com/nuxtify-dev/pages/commit/4eba5de))
+
+### 📖 Documentation
+
+- Fix types link ([00f9282](https://github.com/nuxtify-dev/pages/commit/00f9282))
+
 ## v0.7.1
 
 🚨 Breaking changes in [`@nuxtify/core`](https://github.com/nuxtify-dev/core/releases/tag/v0.7.0)
