@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.7.3
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.2...v0.7.3)
+
+### 🩹 Fixes
+
+- **ui:** Footer link margin ([1602207](https://github.com/nuxtify-dev/pages/commit/1602207))
+
 ## v0.7.2
 
 [compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.1...v0.7.2)
