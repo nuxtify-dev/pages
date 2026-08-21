@@ -20,7 +20,7 @@
 ### Table of Contents
 
 - ♾️ [Why Nuxtify?](#why-nuxtify)
-- 🧩 [Nuxtify Modules](#modules)
+- 🧩 [Modules](#modules)
 - ✨ [Features](#features)
 - 🚀 [Quick Start](#quick-start)
 - 🔧 [Configuration](#configuration)
@@ -31,7 +31,7 @@
 
 ## <a name="why-nuxtify">♾️ Why Nuxtify?</a>
 
-Nuxtify is a collection of [Nuxt modules](https://nuxt.com/docs/guide/concepts/modules) that help you stay organized, maintain focus, and _ship weirdly fast_.
+Nuxtify is a collection of [Nuxt modules](https://nuxt.com/docs/guide/concepts/modules) that help you stay organized, maintain focus, and _ship reliably fast_.
 
 It's built on a loosely opinionated stack that eliminates decision fatigue and ensures consistency across projects. This extensible approach gives you incredible control over your site's structure and style.
 
@@ -53,27 +53,12 @@ In short, Nuxtify helps you build faster, iterate smarter, and maintain consiste
 
 ## <a name="modules">🧩 Modules</a>
 
-### [Nuxtify Pages](https://github.com/nuxtify-dev/pages) (this module)
+Nuxtify is split into two paths: marketing site modules and SaaS modules. Both paths are built on top of the Nuxtify Core module. You can read more about all the modules [here](https://nuxtify.dev/modules).
 
-Provides single and multi-page website building blocks so you can _ship weirdly fast_.
-
-- Ready to use page components, page templates, and email subscribe form
-- (coming soon) Robots, sitemaps, schema.org, social share images, broken links, and more powered by [Nuxt SEO](https://nuxtseo.com/)
-
-### [Nuxtify App](https://github.com/nuxtify-dev/app)
-
-Provides a single page app (SPA) skeleton for building your next SaaS or AI tool.
-
-- Admin backend powered by [Firebase](https://firebase.google.com/) and [Vuefire](https://vuefire.vuejs.org/)
-- Sign in and sign up pages powered by [Firebase Authentication](https://firebase.google.com/products/auth)
-- User account page, app style navigation, and more...
-
-### [Nuxtify Core](https://github.com/nuxtify-dev/core)
-
-Provides the core functionality for Nuxtify, including:
-
-- Default components, composables, and utilities
-- Global configuration and theming with [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/)
+- [Nuxtify Pages](https://github.com/nuxtify-dev/pages) (this module). Provides single and multi-page website building blocks.
+- [Nuxtify CMS](https://github.com/nuxtify-dev/cms). Provides a lightweight, file-based CMS for Nuxt applications. Extends Nuxtify Pages.
+- [Nuxtify Core](https://github.com/nuxtify-dev/core). Provides core, shared functionality for all other modules.
+- [Nuxtify App](https://github.com/nuxtify-dev/app). Provides a single page app (SPA) skeleton for building your next SaaS or AI tool.
 
 ## <a name="features">✨ Features</a>
 
@@ -81,7 +66,7 @@ Nuxtify Pages builds on the functionality in [Nuxtify Core](https://github.com/n
 
 ### 💡 Intuitive UI & UX
 
-- Ready to use components, page templates, and layouts so you can _ship weirdly fast_
+- Ready to use components, page templates, and layouts
 - Easily override any component with [Vuetify global defaults](https://vuetifyjs.com/en/features/global-configuration/)
 - Icons powered by [Material Design Icons](https://pictogrammers.com/library/mdi/)
 - Fully responsive and adapts to all modern browsers and devices
@@ -92,17 +77,16 @@ Nuxtify Pages builds on the functionality in [Nuxtify Core](https://github.com/n
 - Zero-config with sensible defaults for common use cases
 - All components use the modern [Vue Composition API](https://vuejs.org/guide/extras/composition-api-faq) and [Single File Component (SFC) syntax](https://vuejs.org/guide/scaling-up/sfc.html)
 - [TypeScript](https://www.typescriptlang.org/) auto-complete and type safety for all components
-- [ESLint](https://eslint.org/) support out of the box using flat config (v9)
+- [ESLint](https://eslint.org/) support out of the box using flat config (v9+)
 - Identify performance gaps and seamlessly manage your app with [Nuxt Devtools](https://devtools.nuxt.com/)
 - Clean, elegant code that's easy to understand and customize
 - Loosely opinionated, leveraging ecosystem standards so you're not locked into outdated dependencies and practices
 
-### 🤖 Smart SEO, Security, & Performance
+### 🤖 Security & Performance
 
 - Fully tree shakeable for small bundle sizes
 - Optimized caching and rendering strategies for each page with [hybrid rendering](https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering)
-- (coming soon) Robots, sitemaps, schema.org, social share images, broken links, and more powered by [Nuxt SEO](https://nuxtseo.com/)
-- (coming soon) Fast, responsive, optimized images for [20+ image providers](https://image.nuxt.com/get-started/providers) powered by [Nuxt Image](https://image.nuxt.com/)
+- Fast, responsive, optimized images for [20+ image providers](https://image.nuxt.com/get-started/providers) powered by [Nuxt Image](https://image.nuxt.com/)
 - (coming soon) Load third-party scripts with better performance, privacy, security powered by [Nuxt Scripts](https://scripts.nuxt.com/)
 - (coming soon) Optimal security patterns and principles powered by [Nuxt Security](https://nuxt.com/modules/security)
 
