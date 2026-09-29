@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.7.4
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.3...v0.7.4)
+
+### 🩹 Fixes
+
+- **ui:** Center footer email form on small screens ([b747f33](https://github.com/nuxtify-dev/pages/commit/b747f33))
+
+### 📖 Documentation
+
+- Simplify readme module section ([484c062](https://github.com/nuxtify-dev/pages/commit/484c062))
+
 ## v0.7.3
 
 [compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.2...v0.7.3)
