@@ -32,6 +32,7 @@ const nuxtifyConfig = useNuxtifyConfig()
         v-if="nuxtifyConfig.email?.provider?.defaultSubmitUrl"
         :submit-url="nuxtifyConfig.email.provider.defaultSubmitUrl"
         dark
+        class="mx-auto"
       />
     </v-col>
   </v-row>
