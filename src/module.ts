@@ -1,7 +1,6 @@
 import {
   addComponentsDir,
   addImportsDir,
-  addLayout,
   createResolver,
   defineNuxtModule,
   extendPages,
@@ -62,9 +61,13 @@ export default defineNuxtModule<ModuleOptions>().with({
     })
 
     // Layouts
-    addLayout({
-      src: resolve('./runtime/layouts/DefaultLayout.vue'),
-    }, 'default')
+    const defaultLayoutFile = resolve('./runtime/layouts/DefaultLayout.vue')
+    nuxt.hook('app:resolve', (app) => {
+      app.layouts.default ||= {
+        name: 'default',
+        file: defaultLayoutFile,
+      }
+    })
 
     // Components
     addComponentsDir({

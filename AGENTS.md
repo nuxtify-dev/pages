@@ -116,7 +116,7 @@ To maintain a cohesive and robust codebase, all modifications must adhere to the
 1. **Kit Utilities:** Always use standard `@nuxt/kit` methods for registering files and extending configurations. Avoid direct manipulation of the Nuxt config object.
    - Use `addComponentsDir()` for component registration.
    - Use `addImportsDir()` for auto-importing composables and utilities.
-   - Use `addLayout()` for registering layouts.
+   - Use `nuxt.hook('app:resolve', ...)` to register layouts directly on disk (avoiding `addLayout()` virtual module `ENOENT` issues with `<style>` blocks).
    - Use `extendPages()` to define routes (e.g., dynamic routes like `/:slug`).
 2. **Options and Defaults:** Always ensure new configuration options in `src/types/module.ts` are declared as optional and are assigned appropriate defaults in `src/module.ts`.
 3. **AppConfig Syncing:** Expose options to the runtime via `nuxt.options.appConfig.nuxtify`. Retrieve them inside runtime code using the `useNuxtifyConfig` composable.
