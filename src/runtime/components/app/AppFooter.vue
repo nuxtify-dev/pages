@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { computed, useDisplay, useNuxtifyConfig } from '#imports'
+import { computed, useNuxtifyConfig } from '#imports'
 
 // STATE - GLOBAL
 const nuxtifyConfig = useNuxtifyConfig()
-const { xs } = useDisplay()
 
 // Navigation
 const footerPrimaryLinks = nuxtifyConfig.navigation?.altPrimary
@@ -22,10 +21,7 @@ const brandColWidth = computed(() => {
 </script>
 
 <template>
-  <v-footer
-    class="bg-primary justify-center mt-8 mt-md-16"
-    :class="{ 'text-center': xs }"
-  >
+  <v-footer class="bg-primary justify-center mt-8 mt-md-16">
     <v-row
       class="px-sm-1 pt-12 pb-4 mb-1"
       style="max-width: 1280px"
@@ -106,7 +102,6 @@ const brandColWidth = computed(() => {
             <v-divider
               v-if="footerSecondaryLinks?.length"
               class="my-4"
-              :class="{ 'mx-auto': xs }"
               style="width: 50px"
             />
 
