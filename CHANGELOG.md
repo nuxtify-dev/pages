@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.8.0
+
+[compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.4...v0.8.0)
+
+### 🚀 Enhancements
+
+- Support @nuxtify/core v0.10.0 nav dropdowns and runtime types ([f1363fe](https://github.com/nuxtify-dev/pages/commit/f1363fe))
+
+### 🩹 Fixes
+
+- Default layout ENOENT: no such file or directory ([cc0d59a](https://github.com/nuxtify-dev/pages/commit/cc0d59a))
+
+### 🏡 Chore
+
+- **deps:** ⚠️  Update nuxtify core ([63b1bbf](https://github.com/nuxtify-dev/pages/commit/63b1bbf))
+
+#### ⚠️ Breaking Changes
+
+- **deps:** ⚠️  Update nuxtify core ([63b1bbf](https://github.com/nuxtify-dev/pages/commit/63b1bbf))
+
 ## v0.7.4
 
 [compare changes](https://github.com/nuxtify-dev/pages/compare/v0.7.3...v0.7.4)
