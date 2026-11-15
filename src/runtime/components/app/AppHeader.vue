@@ -149,43 +149,36 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
     </div>
 
     <template #append>
-      <!-- Mobile navigation -->
-      <v-app-bar-nav-icon
-        v-if="smAndDown"
-        :icon="drawer ? 'mdi-close' : 'mdi-menu'"
-        color="primary"
-        aria-label="Navigation Menu"
-        @click="drawer = !drawer"
-      />
-
-      <!-- Desktop navigation -->
+      <!-- Secondary navigation -->
       <nav
-        v-else
+        v-if="!smAndDown || featuredSecondaryLink?.text"
         class="d-flex align-center"
       >
         <!-- Secondary links -->
-        <v-btn
-          v-for="link in secondaryNavLinks?.slice(1).reverse()"
-          :key="link.text"
-          :to="link.to"
-          :href="link.href"
-          :prepend-icon="link.icon"
-          :active="false"
-          size="large"
-          color="unset"
-          :target="link.openInNew ? '_blank' : undefined"
-          :rel="link.openInNew ? 'noopener nofollow' : undefined"
-          class="nav-items mx-2"
-        >
-          {{ link.text }}
-          <v-icon
-            v-if="link.openInNew"
-            icon="mdi-arrow-top-right"
-            size="x-small"
-            color="grey"
-            class="ml-1"
-          />
-        </v-btn>
+        <template v-if="!smAndDown">
+          <v-btn
+            v-for="link in secondaryNavLinks?.slice(1).reverse()"
+            :key="link.text"
+            :to="link.to"
+            :href="link.href"
+            :prepend-icon="link.icon"
+            :active="false"
+            size="large"
+            color="unset"
+            :target="link.openInNew ? '_blank' : undefined"
+            :rel="link.openInNew ? 'noopener nofollow' : undefined"
+            class="nav-items mx-2"
+          >
+            {{ link.text }}
+            <v-icon
+              v-if="link.openInNew"
+              icon="mdi-arrow-top-right"
+              size="x-small"
+              color="grey"
+              class="ml-1"
+            />
+          </v-btn>
+        </template>
 
         <!-- Featured secondary link -->
         <v-btn
@@ -195,20 +188,30 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
           :prepend-icon="featuredSecondaryLink.icon"
           :active="false"
           variant="flat"
-          size="large"
+          :size="smAndDown ? 'small' : 'large'"
           :target="featuredSecondaryLink.openInNew ? '_blank' : undefined"
           :rel="featuredSecondaryLink.openInNew ? 'noopener nofollow' : undefined"
-          class="mx-2"
+          :class="smAndDown ? 'mr-1' : 'mx-2'"
+          @click="drawer = false"
         >
           {{ featuredSecondaryLink.text }}
           <v-icon
             v-if="featuredSecondaryLink.openInNew"
             icon="mdi-arrow-top-right"
-            size="small"
+            :size="smAndDown ? 'x-small' : 'small'"
             class="ml-1"
           />
         </v-btn>
       </nav>
+
+      <!-- Mobile navigation -->
+      <v-app-bar-nav-icon
+        v-if="smAndDown"
+        :icon="drawer ? 'mdi-close' : 'mdi-menu'"
+        color="primary"
+        aria-label="Navigation Menu"
+        @click="drawer = !drawer"
+      />
     </template>
   </v-app-bar>
 </template>

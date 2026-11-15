@@ -13,6 +13,8 @@ describe('ssr', async () => {
     expect(html).toContain('<div>basic</div>')
     expect(html).toContain('Features')
     expect(html).toContain('Resources')
+    expect(html).toContain('Sign Up')
+    expect(html).toContain('Sign In')
   })
 
   it('renders dynamic slug pages', async () => {

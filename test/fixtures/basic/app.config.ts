@@ -28,6 +28,16 @@ export default defineAppConfig({
           ],
         },
       ],
+      secondary: [
+        {
+          text: 'Sign Up',
+          to: '/signup',
+        },
+        {
+          text: 'Sign In',
+          to: '/signin',
+        },
+      ],
     },
   },
 })
