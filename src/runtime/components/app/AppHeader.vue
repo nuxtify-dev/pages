@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
+import { isTitledLinks, useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
 
 // App state
 const { smAndDown } = useDisplay()
@@ -29,33 +29,123 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
     </template>
 
     <!-- Desktop navigation -->
-    <div v-if="!smAndDown">
+    <div
+      v-if="!smAndDown"
+      class="d-flex align-center"
+    >
       <!-- Primary links -->
-      <v-btn
-        v-for="link in primaryNavLinks"
-        :key="link.text"
-        :to="link.to"
-        :href="link.href"
-        :active="false"
-        :prepend-icon="link.icon"
-        slim
-        exact
-        :ripple="false"
-        size="large"
-        color="unset"
-        :target="link.openInNew ? '_blank' : undefined"
-        :rel="link.openInNew ? 'noopener nofollow' : undefined"
-        class="nav-items mx-2"
+      <template
+        v-for="item in primaryNavLinks"
+        :key="isTitledLinks(item) ? `group-${item.title}` : `link-${item.text}`"
       >
-        {{ link.text }}
-        <v-icon
-          v-if="link.openInNew"
-          icon="mdi-arrow-top-right"
-          size="x-small"
-          color="grey"
-          class="ml-1"
-        />
-      </v-btn>
+        <!-- Titled dropdown -->
+        <v-menu
+          v-if="isTitledLinks(item)"
+          open-on-hover
+          :open-delay="100"
+          :close-delay="150"
+          offset="8"
+        >
+          <template #activator="{ props: menuProps, isActive }">
+            <v-btn
+              v-bind="menuProps"
+              :active="false"
+              slim
+              :ripple="false"
+              size="large"
+              color="unset"
+              class="nav-items mx-2"
+            >
+              {{ item.title }}
+              <template #append>
+                <v-icon
+                  icon="mdi-chevron-down"
+                  size="small"
+                  class="nav-chevron"
+                  :class="{ 'rotate-180': isActive }"
+                />
+              </template>
+            </v-btn>
+          </template>
+
+          <v-list
+            nav
+            elevation="3"
+            rounded="lg"
+            min-width="280"
+            max-width="360"
+            class="pa-2 border"
+          >
+            <v-list-item
+              v-for="link in item.links"
+              :key="link.text"
+              :to="link.to"
+              :href="link.href"
+              :target="link.openInNew ? '_blank' : undefined"
+              :rel="link.openInNew ? 'noopener nofollow' : undefined"
+              :lines="link.description ? 'two' : 'one'"
+              rounded="md"
+              color="primary"
+              exact
+              class="py-2"
+            >
+              <template
+                v-if="link.icon"
+                #prepend
+              >
+                <v-icon
+                  :icon="link.icon"
+                  color="secondary"
+                />
+              </template>
+
+              <v-list-item-title class="text-body-2 font-weight-bold d-flex align-center">
+                {{ link.text }}
+                <v-icon
+                  v-if="link.openInNew"
+                  icon="mdi-arrow-top-right"
+                  size="x-small"
+                  color="grey"
+                  class="ml-1"
+                />
+              </v-list-item-title>
+
+              <v-list-item-subtitle
+                v-if="link.description"
+                class="nav-dropdown-description text-caption mt-1"
+              >
+                {{ link.description }}
+              </v-list-item-subtitle>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+        <!-- Flat link -->
+        <v-btn
+          v-else
+          :to="item.to"
+          :href="item.href"
+          :active="false"
+          :prepend-icon="item.icon"
+          slim
+          exact
+          :ripple="false"
+          size="large"
+          color="unset"
+          :target="item.openInNew ? '_blank' : undefined"
+          :rel="item.openInNew ? 'noopener nofollow' : undefined"
+          class="nav-items mx-2"
+        >
+          {{ item.text }}
+          <v-icon
+            v-if="item.openInNew"
+            icon="mdi-arrow-top-right"
+            size="x-small"
+            color="grey"
+            class="ml-1"
+          />
+        </v-btn>
+      </template>
     </div>
 
     <template #append>
@@ -154,5 +244,19 @@ a {
 /* Fix for emoji misalignment in button text */
 :deep(.v-btn__content) {
   line-height: 1;
+}
+
+/* Dropdown chevron transition */
+.nav-chevron {
+  transition: transform 0.2s ease;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Allow full nav item descriptions to wrap cleanly */
+.nav-dropdown-description {
+  display: block;
+  -webkit-line-clamp: unset;
 }
 </style>

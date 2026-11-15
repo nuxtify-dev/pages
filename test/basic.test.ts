@@ -11,5 +11,12 @@ describe('ssr', async () => {
     // Get response to a server-rendered page with `$fetch`.
     const html = await $fetch('/')
     expect(html).toContain('<div>basic</div>')
+    expect(html).toContain('Features')
+    expect(html).toContain('Resources')
+  })
+
+  it('renders dynamic slug pages', async () => {
+    const html = await $fetch('/features')
+    expect(html).toContain('Features')
   })
 })

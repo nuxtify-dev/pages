@@ -9,7 +9,9 @@ export default defineAppConfig({
         lightUrl: '/img/nuxtify-logo-light.png', // Recommended 5:1 aspect ratio (e.g. 400 x 80 px)
         darkUrl: '/img/nuxtify-logo-dark.png', // Recommended 5:1 aspect ratio (e.g. 400 x 80 px)
         width: 200,
+        mobileWidth: 150,
         height: 40,
+        mobileHeight: 28,
       },
     },
 
@@ -37,7 +39,24 @@ export default defineAppConfig({
       primary: [
         { text: 'Pages Features', to: '/pages-features' },
         { text: 'Config', to: '/config' },
-        { text: 'Nuxtify.dev', href: 'https://nuxtify.dev', openInNew: true },
+        {
+          title: 'Resources',
+          links: [
+            {
+              text: 'Showcase',
+              description: 'See production sites built with Nuxtify.',
+              icon: 'mdi-heart-outline',
+              to: '/showcase',
+            },
+            {
+              text: 'Nuxtify.dev',
+              description: 'Guides, module configuration, and examples.',
+              icon: 'mdi-book-open-outline',
+              href: 'https://nuxtify.dev',
+              openInNew: true,
+            },
+          ],
+        },
       ],
       secondary: [
         { text: 'Sign Up', to: '/signup' },

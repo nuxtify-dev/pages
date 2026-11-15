@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
+import { isTitledLinks, useDisplay, useDrawer, useNuxtifyConfig } from '#imports'
 
 // App state
 const { smAndDown } = useDisplay()
@@ -21,29 +21,91 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
     <nav>
       <v-list nav>
         <!-- Primary links -->
-        <v-list-item
-          v-for="(link, i) in primaryNavLinks"
-          :key="i"
-          :to="link.to"
-          :href="link.href"
-          :prepend-icon="link.icon"
-          color="primary"
-          :target="link.openInNew ? '_blank' : undefined"
-          :rel="link.openInNew ? 'noopener nofollow' : undefined"
-          slim
-          exact
+        <template
+          v-for="item in primaryNavLinks"
+          :key="isTitledLinks(item) ? `group-${item.title}` : `link-${item.text}`"
         >
-          <v-list-item-title class="text-subtitle-1 font-weight-bold py-1">
-            {{ link.text }}
-            <v-icon
-              v-if="link.openInNew"
-              icon="mdi-arrow-top-right"
-              size="x-small"
-              color="grey"
-              class="ml-1"
-            />
-          </v-list-item-title>
-        </v-list-item>
+          <!-- Titled dropdown -->
+          <v-list-group
+            v-if="isTitledLinks(item)"
+            :value="item.title"
+            fluid
+          >
+            <template #activator="{ props: activatorProps }">
+              <v-list-item
+                v-bind="activatorProps"
+                color="primary"
+                slim
+              >
+                <v-list-item-title class="text-subtitle-1 font-weight-bold py-1">
+                  {{ item.title }}
+                </v-list-item-title>
+              </v-list-item>
+            </template>
+
+            <v-list-item
+              v-for="link in item.links"
+              :key="link.text"
+              :to="link.to"
+              :href="link.href"
+              :prepend-icon="link.icon"
+              :lines="link.description ? 'two' : 'one'"
+              color="primary"
+              :target="link.openInNew ? '_blank' : undefined"
+              :rel="link.openInNew ? 'noopener nofollow' : undefined"
+              slim
+              exact
+            >
+              <v-list-item-title class="text-body-2 font-weight-bold">
+                {{ link.text }}
+                <v-icon
+                  v-if="link.openInNew"
+                  icon="mdi-arrow-top-right"
+                  size="x-small"
+                  color="grey"
+                  class="ml-1"
+                />
+              </v-list-item-title>
+              <v-list-item-subtitle
+                v-if="link.description"
+                class="nav-drawer-description text-caption"
+              >
+                {{ link.description }}
+              </v-list-item-subtitle>
+            </v-list-item>
+          </v-list-group>
+
+          <!-- Flat link -->
+          <v-list-item
+            v-else
+            :to="item.to"
+            :href="item.href"
+            :prepend-icon="item.icon"
+            :lines="item.description ? 'two' : 'one'"
+            color="primary"
+            :target="item.openInNew ? '_blank' : undefined"
+            :rel="item.openInNew ? 'noopener nofollow' : undefined"
+            slim
+            exact
+          >
+            <v-list-item-title class="text-subtitle-1 font-weight-bold py-1">
+              {{ item.text }}
+              <v-icon
+                v-if="item.openInNew"
+                icon="mdi-arrow-top-right"
+                size="x-small"
+                color="grey"
+                class="ml-1"
+              />
+            </v-list-item-title>
+            <v-list-item-subtitle
+              v-if="item.description"
+              class="text-caption"
+            >
+              {{ item.description }}
+            </v-list-item-subtitle>
+          </v-list-item>
+        </template>
 
         <!-- Secondary links -->
         <v-list-item
@@ -99,3 +161,18 @@ const featuredSecondaryLink = secondaryNavLinks?.slice(0, 1)[0] // first link ge
     </template>
   </v-navigation-drawer>
 </template>
+
+<style scoped>
+:deep(.v-list-group__items) {
+  --v-list-indent: 8px;
+}
+
+:deep(.v-list-group__items .v-list-item) {
+  --v-list-prepend-gap: 12px;
+}
+
+.nav-drawer-description {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+</style>

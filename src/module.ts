@@ -12,6 +12,8 @@ import { name, version } from '../package.json'
 // Types
 import type { ModuleOptions } from './types/module'
 
+export type { Link, ModuleOptions, NavigationItem, PageModuleOptions, TitledLinks } from './types/module'
+
 export default defineNuxtModule<ModuleOptions>().with({
   meta: {
     name,
@@ -23,7 +25,7 @@ export default defineNuxtModule<ModuleOptions>().with({
   },
   moduleDependencies: {
     '@nuxtify/core': {
-      version: '>=0.6.1',
+      version: '>=0.10.0',
     },
   },
   defaults: {
@@ -56,9 +58,9 @@ export default defineNuxtModule<ModuleOptions>().with({
     const logger = useLogger('nuxtify-pages')
 
     // Expose module options to app config
-    nuxt.options.appConfig.nuxtify = defu(nuxt.options.appConfig.nuxtify, {
+    nuxt.options.appConfig.nuxtify = defu(nuxt.options.appConfig.nuxtify || {}, {
       ...resolvedOptions,
-    })
+    }) as ModuleOptions
 
     // Layouts
     const defaultLayoutFile = resolve('./runtime/layouts/DefaultLayout.vue')

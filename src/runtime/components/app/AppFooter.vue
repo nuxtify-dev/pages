@@ -40,7 +40,10 @@ const brandColWidth = computed(() => {
             :lg="brandColWidth"
           >
             <!-- Logo -->
-            <NuxtLink to="/">
+            <NuxtLink
+              to="/"
+              class="d-inline-flex"
+            >
               <AppLogo dark />
             </NuxtLink>
 
